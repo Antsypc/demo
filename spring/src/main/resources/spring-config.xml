@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置bean -->
+    <!-- spring3种注入方式:完成对象的构造 -->
+    <!-- 1.属性注入，最常用 -->
+    <bean id="hello1" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+        <!-- 调用相应set函数，把name设置为ypc -->
+        <property name="name" value="ypc" />
+    </bean>
+
+    <!-- 2.构造方法注入:依次对构造方法的参数赋值 -->
+    <bean id="hello2" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+        <!-- 调用构造函数　-->
+        <!-- type指定调用的构造函数的第三个参数是int -->
+        <constructor-arg value="df"/>
+        <constructor-arg value="hao"/>
+        <constructor-arg value="30" type="int"/>
+    </bean>
+
+    <bean id="hello3" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+        <!-- 调用构造函数　-->
+        <!-- index指定该参数在构造函数参数中的位置 -->
+        <!-- 如果字面值中有特殊字符时，用CDATA -->
+        <constructor-arg index="0">
+            <value><![CDATA["<wz^>"]]></value>
+        </constructor-arg>
+        <constructor-arg value="OK" index="1"/>
+        <constructor-arg value="30" index="2" type="double"/>
+        <!--如果要设置该值为null，如下-->
+        <!--<constructor-arg><null/></constructor-arg>-->
+    </bean>
+
+
+    <bean id="car1" class="xyz.antsgroup.example.spring.hello.Car">
+        <property name="info" value="haoche"/>
+        <property name="name" value="BMW"/>
+    </bean>
+    <!--一个对象中有另一对象的实例，用ref指定对象，或者使用内部bean-->
+    <bean id="hello4" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+        <property name="name" value="ljf"/>
+        <property name="myCar" ref="car1"/>
+        <!--上一行也可以写成如下-->
+        <!--
+        <property name="myCar">
+            <bean class="xyz.antsgroup.example.spring.hello.Car">
+                <property name="info" value="haoche"></property>
+                <property name="name" value="BMW"></property>
+            </bean>
+        </property>
+        -->
+    </bean>
+
+    <!--为级联属性赋值，即为对象中的对象的属性赋值-->
+    <bean id="hello5" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+        <property name="name" value="gwc"/>
+        <property name="myCar" ref="car1"/>
+        <!--保证Car有info的set函数-->
+        <property name="myCar.info" value="hao"/>
+    </bean>
+
+    <!--通过p命名空间为bean属性赋值，更简洁-->
+    <!--
+    <bean id="hellox" class="xyz.antsgroup.example.spring.hello.Car" p:name="BYD" p:myCar="car1"/>
+    -->
+
+    <!--
+     配置 java.util.List 类型的属性, 需要指定 <list>  标签, 在标签里包含一些元素.
+     这些标签可以通过 <value> 指定简单的常量值, 通过 <ref> 指定对其他 Bean 的引用.
+     通过<bean> 指定内置 Bean 定义. 通过 <null/> 指定空元素. 甚至可以内嵌其他集合
+     -->
+    <!-- 装配集合属性 -->
+    <!--
+    <bean id="user" class="xyz.antsgroup.example.spring.hello.User">
+        <property name="userName" value="Jack"></property>
+        <property name="cars">
+            <list>
+                <ref bean="car"/>
+                <ref bean="car2"/>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="ab" key-ref="car1"></entry>
+            </map>
+        </property>
+    </bean>
+    -->
+
+
+    <!--如果集合被多次使用，单独配置更好，供多个bean调用-->
+    <!--调用时直接ref="cars"-->
+    <!--
+    <util:list id="cars">
+        <ref bean="car1"></ref>
+        <ref bean="car2"></ref>
+    </util:list>
+    -->
+
+
+</beans>

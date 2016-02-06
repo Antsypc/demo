@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.username">gentlemen</property>
+        <property name="connection.password">gentlemen</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/labms?useUnicode=true&amp;characterEncoding=utf8</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property> <!-- 方言 -->
+
+        <property name="show_sql">true</property>   <!-- 执行sql语句时将其输出,测试时使用 -->
+        <property name="format_sql">true</property> <!-- 格式化输出的sql语句,便于阅读 -->
+        <property name="hbm2ddl.auto">update</property> <!-- create每次执行都重新创建表,update如果有新表则添加,希望保留原来数据时使用,create-drop每次程序执行都先创建执行后删除,validate验证是否一致不一致则不创建 -->
+        <!--<property name="hibernate.current_session_context_class">thread</property> thread表示本地事务,jta表示全局事务.在希望使用current_session的时候 -->
+
+        <mapping resource="labms.hbm.xml"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.CategoryEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.ConsumablesEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.ConsumablesUsageEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.CourseEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.CourseChooseLogEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentMaintenanceEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentUsageEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.LabManagerEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.LabRoomEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.LabRoomUsageEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.ScoreEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.StudentEntity"/>
+        <mapping class="xyz.antsgroup.example.hibernate.entity.TeacherEntity"/>
+
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - labms@localhost" uuid="e247512c-b2f8-4163-9ecd-4ad0984828f0">
+    <database-info product="MySQL" version="5.6.16-1~exp1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="labms"/>
+    <table name="category" schema="" catalog="labms" type="TABLE">
+      <column name="categoryId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="parent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="categoryId"/>
+    </table>
+    <table name="consumables" schema="" catalog="labms" type="TABLE">
+      <column name="consumablesId" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="categoryId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="total" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="unit" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="consumablesId"/>
+    </table>
+    <table name="consumablesUsage" schema="" catalog="labms" type="TABLE">
+      <column name="consumablesUsageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="consumablesId" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <column name="action" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="managerId" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1"/>
+      <column name="time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="consumablesUsageId"/>
+    </table>
+    <table name="course" schema="" catalog="labms" type="TABLE">
+      <column name="courseId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="courseName" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="courseClass" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="timeFrom" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="timeTo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="teacherId" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1"/>
+      <column name="teacherName" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="coursewareURL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="courseId"/>
+    </table>
+    <table name="courseChooseLog" schema="" catalog="labms" type="TABLE">
+      <column name="courseChooseLogId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="studentId" sqlType="CHAR" precision="13" scale="0" nullable="false" jdbcType="1"/>
+      <column name="labRoomUsageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="time" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="courseChooseLogId"/>
+    </table>
+    <table name="equipment" schema="" catalog="labms" type="TABLE">
+      <column name="equipmentId" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="categoryId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="total" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MQ=="/>
+      <column name="unit" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="free" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="isOk" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="equipmentId"/>
+    </table>
+    <table name="equipmentMaintenance" schema="" catalog="labms" type="TABLE">
+      <column name="equipmentMaintenanceId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="equipmentId" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="action" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="checkInTime" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="returnTime" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="managerId" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1"/>
+      <column name="checkInDescription" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="returnDescription" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="equipmentMaintenanceId"/>
+    </table>
+    <table name="equipmentUsage" schema="" catalog="labms" type="TABLE">
+      <column name="equipmentUsageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="equipmentId" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <column name="action" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="time" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="equipmentUsageId"/>
+    </table>
+    <table name="labManager" schema="" catalog="labms" type="TABLE">
+      <column name="labManagerId" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="VARCHAR" precision="26" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="position" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="CHAR" precision="14" scale="0" nullable="true" jdbcType="1"/>
+      <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="labManagerId"/>
+    </table>
+    <table name="labRoom" schema="" catalog="labms" type="TABLE">
+      <column name="labRoomId" sqlType="CHAR" precision="7" scale="0" nullable="false" jdbcType="1"/>
+      <column name="campus" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="building" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="roomName" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="roomType" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="capacity" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="managerId" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="managerName" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="labRoomId"/>
+    </table>
+    <table name="labRoomUsage" schema="" catalog="labms" type="TABLE">
+      <column name="labRoomUsageId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="labRoomId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="timeFrom" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="courseId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="teacherId" sqlType="CHAR" precision="8" scale="0" nullable="true" jdbcType="1"/>
+      <column name="nowNum" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5" def="MA=="/>
+      <column name="maxNum" sqlType="SMALLINT" precision="5" scale="0" nullable="true" jdbcType="5" def="MA=="/>
+      <column name="isOk" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" def="JzAn"/>
+      <column name="description" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="labRoomUsageId"/>
+    </table>
+    <table name="score" schema="" catalog="labms" type="TABLE">
+      <column name="studentId" sqlType="CHAR" precision="13" scale="0" nullable="false" jdbcType="1"/>
+      <column name="courseId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="stuScore" sqlType="CHAR" precision="6" scale="0" nullable="false" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="studentId,courseId"/>
+    </table>
+    <table name="student" schema="" catalog="labms" type="TABLE">
+      <column name="studentId" sqlType="CHAR" precision="13" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="VARCHAR" precision="26" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="department" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="major" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="studentClass" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <column name="inYear" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="nativePlace" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="CHAR" precision="13" scale="0" nullable="true" jdbcType="1"/>
+      <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="studentId"/>
+    </table>
+    <table name="teacher" schema="" catalog="labms" type="TABLE">
+      <column name="teacherId" sqlType="CHAR" precision="8" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="VARCHAR" precision="26" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="department" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="title" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="CHAR" precision="14" scale="0" nullable="true" jdbcType="1"/>
+      <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="inYear" sqlType="SMALLINT" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="nativePlace" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="teacherId"/>
+    </table>
+    <table name="test" schema="" catalog="labms" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="a_b" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <procedure name="free_lab_by_campus_day" schema="" catalog="labms" type="1">
+      <prototype>
+        <parameter name="c" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="day" sqlType="VARCHAR" precision="12" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="lab_by_campus_day_status" schema="" catalog="labms" type="1">
+      <prototype>
+        <parameter name="c" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="day" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="status" sqlType="CHAR" precision="255" scale="0" nullable="true" jdbcType="1" type="1" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="student_chosen_lab" schema="" catalog="labms" type="1">
+      <prototype>
+        <parameter name="sid" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="student_get_lab" schema="" catalog="labms" type="1">
+      <prototype>
+        <parameter name="sid" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+      </prototype>
+    </procedure>
+  </data-source>
+</component>

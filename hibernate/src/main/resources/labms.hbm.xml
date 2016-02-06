@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+    <class name="xyz.antsgroup.example.hibernate.entity.CategoryEntity" table="category" schema="" catalog="labms">
+        <id name="categoryId">
+            <column name="categoryId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="parent">
+            <column name="parent" sql-type="int"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.ConsumablesEntity" table="consumables" schema=""
+           catalog="labms">
+        <id name="consumablesId">
+            <column name="consumablesId" sql-type="varchar" not-null="true"/>
+            <generator class="assigned"/>   <!-- 单一主键生成策略:默认assigned手工赋值,native MySQL是increment,oracle是sequence-->
+        </id>
+        <property name="categoryId">
+            <column name="categoryId" sql-type="int" not-null="true"/>
+        </property>
+        <property name="total">
+            <column name="total" sql-type="int" not-null="true"/>
+        </property>
+        <property name="unit">
+            <column name="unit" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.ConsumablesUsageEntity" table="consumablesUsage" schema=""
+           catalog="labms">
+        <id name="consumablesUsageId">
+            <column name="consumablesUsageId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="consumablesId">
+            <column name="consumablesId" sql-type="varchar" length="256" not-null="true"/>
+        </property>
+        <property name="action">
+            <column name="action" sql-type="char" length="1" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="int" not-null="true"/>
+        </property>
+        <property name="managerId">
+            <column name="managerId" sql-type="char" length="8" not-null="true"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="int" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" length="65535"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.CourseEntity" table="course" schema="" catalog="labms">
+        <id name="courseId">
+            <column name="courseId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="courseName">
+            <column name="courseName" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="courseClass">
+            <column name="courseClass" sql-type="varchar"/>
+        </property>
+        <property name="timeFrom">
+            <column name="timeFrom" sql-type="int" not-null="true"/>
+        </property>
+        <property name="timeTo">
+            <column name="timeTo" sql-type="int" not-null="true"/>
+        </property>
+        <property name="teacherId">
+            <column name="teacherId" sql-type="char" length="8" not-null="true"/>
+        </property>
+        <property name="teacherName">
+            <column name="teacherName" sql-type="varchar" length="20"/>
+        </property>
+        <property name="coursewareUrl">
+            <column name="coursewareURL" sql-type="varchar"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" length="65535"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.CourseChooseLogEntity" table="courseChooseLog" schema=""
+           catalog="labms">
+        <id name="courseChooseLogId">
+            <column name="courseChooseLogId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="studentId">
+            <column name="studentId" sql-type="char" length="13" not-null="true"/>
+        </property>
+        <property name="labRoomUsageId">
+            <column name="labRoomUsageId" sql-type="int" not-null="true"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="int"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentEntity" table="equipment" schema="" catalog="labms">
+        <id name="equipmentId">
+            <column name="equipmentId" sql-type="varchar" not-null="true"/>
+        </id>
+        <property name="categoryId">
+            <column name="categoryId" sql-type="int" not-null="true"/>
+        </property>
+        <property name="total">
+            <column name="total" sql-type="int"/>
+        </property>
+        <property name="unit">
+            <column name="unit" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="free">
+            <column name="free" sql-type="int" not-null="true"/>
+        </property>
+        <property name="isOk">
+            <column name="isOk" sql-type="tinyint" not-null="true"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentMaintenanceEntity" table="equipmentMaintenance"
+           schema="" catalog="labms">
+        <id name="equipmentMaintenanceId">
+            <column name="equipmentMaintenanceId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="equipmentId">
+            <column name="equipmentId" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="action">
+            <column name="action" sql-type="char" length="1" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="int" not-null="true"/>
+        </property>
+        <property name="checkInTime">
+            <column name="checkInTime" sql-type="int" not-null="true"/>
+        </property>
+        <property name="returnTime">
+            <column name="returnTime" sql-type="int"/>
+        </property>
+        <property name="managerId">
+            <column name="managerId" sql-type="char" length="8" not-null="true"/>
+        </property>
+        <property name="checkInDescription">
+            <column name="checkInDescription" sql-type="text" length="65535"/>
+        </property>
+        <property name="returnDescription">
+            <column name="returnDescription" sql-type="text" length="65535"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentUsageEntity" table="equipmentUsage" schema=""
+           catalog="labms">
+        <id name="equipmentUsageId">
+            <column name="equipmentUsageId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="equipmentId">
+            <column name="equipmentId" sql-type="varchar" length="256" not-null="true"/>
+        </property>
+        <property name="action">
+            <column name="action" sql-type="char" length="1" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="int" not-null="true"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.LabManagerEntity" table="labManager" schema="" catalog="labms">
+        <id name="labManagerId">
+            <column name="labManagerId" sql-type="char" length="8" not-null="true"/>
+        </id>
+        <property name="password">
+            <column name="password" sql-type="varchar" length="26" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="position">
+            <column name="position" sql-type="varchar" length="10" not-null="true"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar" length="3" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="char" length="14"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar" length="30"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.LabRoomEntity" table="labRoom" schema="" catalog="labms">
+        <id name="labRoomId">
+            <column name="labRoomId" sql-type="char" length="7" not-null="true"/>
+        </id>
+        <property name="campus">
+            <column name="campus" sql-type="varchar" length="15" not-null="true"/>
+        </property>
+        <property name="building">
+            <column name="building" sql-type="varchar" length="30" not-null="true"/>
+        </property>
+        <property name="roomName">
+            <column name="roomName" sql-type="varchar" length="30" not-null="true"/>
+        </property>
+        <property name="roomType">
+            <column name="roomType" sql-type="varchar" length="30"/>
+        </property>
+        <property name="capacity">
+            <column name="capacity" sql-type="smallint" not-null="true"/>
+        </property>
+        <property name="managerId">
+            <column name="managerId" sql-type="char" length="8"/>
+        </property>
+        <property name="managerName">
+            <column name="managerName" sql-type="varchar" length="20"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.LabRoomUsageEntity" table="labRoomUsage" schema=""
+           catalog="labms">
+        <id name="labRoomUsageId">
+            <column name="labRoomUsageId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="labRoomId">
+            <column name="labRoomId" sql-type="int" not-null="true"/>
+        </property>
+        <property name="timeFrom">
+            <column name="timeFrom" sql-type="int" not-null="true"/>
+        </property>
+        <property name="courseId">
+            <column name="courseId" sql-type="int"/>
+        </property>
+        <property name="teacherId">
+            <column name="teacherId" sql-type="char" length="8"/>
+        </property>
+        <property name="nowNum">
+            <column name="nowNum" sql-type="smallint"/>
+        </property>
+        <property name="maxNum">
+            <column name="maxNum" sql-type="smallint"/>
+        </property>
+        <property name="isOk">
+            <column name="isOk" sql-type="char" length="1"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar" length="30"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.ScoreEntity" table="score" schema="" catalog="labms">
+        <composite-id mapped="true" class="xyz.antsgroup.example.hibernate.entity.ScoreEntityPK">
+            <key-property name="studentId">
+                <column name="studentId" sql-type="char" length="13" not-null="true"/>
+            </key-property>
+            <key-property name="courseId">
+                <column name="courseId" sql-type="int" not-null="true"/>
+            </key-property>
+        </composite-id>
+        <property name="stuScore">
+            <column name="stuScore" sql-type="char" length="6" not-null="true"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.StudentEntity" table="student" schema="" catalog="labms">
+        <id name="studentId">
+            <column name="studentId" sql-type="char" length="13" not-null="true"/>
+        </id>
+        <property name="password">
+            <column name="password" sql-type="varchar" length="26" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="department">
+            <column name="department" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="major">
+            <column name="major" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="studentClass">
+            <column name="studentClass" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar" length="3" not-null="true"/>
+        </property>
+        <property name="inYear">
+            <column name="inYear" sql-type="smallint" not-null="true"/>
+        </property>
+        <property name="nativePlace">
+            <column name="nativePlace" sql-type="varchar" length="50" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="char" length="13"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar" length="30"/>
+        </property>
+    </class>
+    <class name="xyz.antsgroup.example.hibernate.entity.TeacherEntity" table="teacher" schema="" catalog="labms">
+        <id name="teacherId">
+            <column name="teacherId" sql-type="char" length="8" not-null="true"/>
+        </id>
+        <property name="password">
+            <column name="password" sql-type="varchar" length="26" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="department">
+            <column name="department" sql-type="varchar" length="20" not-null="true"/>
+        </property>
+        <property name="title">
+            <column name="title" sql-type="varchar" length="10" not-null="true"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar" length="3" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="char" length="14"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar" length="30"/>
+        </property>
+        <property name="inYear">
+            <column name="inYear" sql-type="smallint" not-null="true"/>
+        </property>
+        <property name="nativePlace">
+            <column name="nativePlace" sql-type="varchar" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

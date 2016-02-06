@@ -12,6 +12,9 @@
         <module>logging</module>
         <module>junit</module>
         <module>json</module>
+        <module>spring</module>
+        <module>mybatis</module>
+        <module>hibernate</module>
     </modules>
 
     <build>
