@@ -7,8 +7,6 @@ import javax.swing.*;
 import javax.swing.Timer;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 1.内部类既可以访问自身的数据域,也可以访问创建他的对象的数据域.
  * 2.局部内部类:类的定义在一个方法中时.这样,只有该方法知道该类的存在.
  * 3.匿名内部类:见

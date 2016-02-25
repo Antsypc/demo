@@ -7,8 +7,6 @@ import javax.swing.*;
 import javax.swing.Timer;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 由于构造器与类名相同,而匿名类没有类名,所以匿名类没有构造器.取而代之的是把超类的构造器传给他.
  *
  * 两种情况使用匿名内部类很好:

@@ -1,8 +1,6 @@
 package xyz.antsgroup.example.grammar.innerClass.staticInnerClass;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 静态内部类
  * 有时使用内部类只是为了把类隐藏在一个类的内部,不需要访问外围类的域,使用静态内部类就可以避免产生外围类的引用.
  */

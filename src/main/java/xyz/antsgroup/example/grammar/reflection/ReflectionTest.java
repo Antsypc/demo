@@ -5,8 +5,6 @@ import java.util.*;
 import java.lang.reflect.*;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 分析一个类所有的构造方法,方法和域.
  *
  * 预备知识:

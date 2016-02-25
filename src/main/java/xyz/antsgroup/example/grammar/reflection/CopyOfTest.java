@@ -4,8 +4,6 @@ import java.lang.reflect.*;
 import java.util.*;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 扩大原数组的长度
  */
 public class CopyOfTest

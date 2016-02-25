@@ -3,8 +3,6 @@ package xyz.antsgroup.example.grammar.reflection;
 import java.lang.reflect.*;
 
 /**
- * Created by ants_ypc on 2/24/16.
- *
  * 使用 cl.getMethod("methodName", double.class); 调用任意类的方法
  */
 public class MethodTableTest

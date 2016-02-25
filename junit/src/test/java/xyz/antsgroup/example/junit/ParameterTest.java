@@ -15,7 +15,7 @@ public class ParameterTest {
 	/*
 	 * 1.更改默认的测试运行器为RunWith(Parameterized.class)
 	 * 2.声明变量来存放预期值和结果值
-	 * 3.声明一个返回值为 Collection 的公共静态方法，并使用 @Parameters 进行修饰
+	 * 3.声明一个返回值为 collection 的公共静态方法，并使用 @Parameters 进行修饰
 	 * 4.为测试类声明一个带有参数的公共构造函数，并在其中为之声明变量赋值
 	 */
 	double expected =0;
