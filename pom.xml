@@ -17,6 +17,11 @@
         <module>hibernate</module>
     </modules>
 
+    <properties>
+        <!-- 解决编译时提示的 WARNING -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
 
@@ -26,6 +31,8 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <!-- 解决编译时提示的 WARNING -->
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 
