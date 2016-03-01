@@ -4,6 +4,8 @@ import java.lang.reflect.*;
 
 /**
  * 使用 cl.getMethod("methodName", double.class); 调用任意类的方法
+ * 使用 invoke 进行执行该 method
+ * 后文还有一个例子
  */
 public class MethodTableTest
 {
@@ -57,3 +59,12 @@ public class MethodTableTest
         }
     }
 }
+
+//    // 调用 RestoreIPAddresses 类的 private boolean isValidWithPattern(String s)
+//    @Test
+//    public void testIsValidWithPattern() throws Exception {
+//        Method method = RestoreIPAddresses.class.getDeclaredMethod("isValidWithPattern", String.class);   // 从第二个参数开始依次是方法参数
+//        method.setAccessible(true);   // 如果该方法是public则不用执行此步
+//        assertTrue((Boolean) method.invoke(new RestoreIPAddresses(), "10"));  // 如果方法是static,第一个参数是null
+//
+//    }

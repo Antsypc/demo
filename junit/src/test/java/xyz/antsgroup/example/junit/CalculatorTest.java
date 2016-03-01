@@ -17,6 +17,13 @@ public class CalculatorTest {
      * 5.测试单元中的每个方法必须可以独立测试，测试方法间不能有任何的依赖
      * 6.测试类使用 Test 作为类名的后缀（不是必须）
      * 7.测试方法使用 test 作为方法名的前缀（不是必须）
+     *
+     * assert 方法主要有:
+     * assertArrayEquals,
+     * assertEquals,assertNotEquals,
+     * assertFalse,assertTrue,
+     * assertNotSame,assertSame,
+     * assertNotNull,assertNull
      */
 
     @Test

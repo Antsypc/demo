@@ -36,7 +36,7 @@ import java.lang.reflect.*;
  *
  *
  * 设置一对像某域的值:
- * Field f = cl.getDeclaredField("name");
+ * Field f = cl.getDeclaredField("name");   // getField("name") 只能获取 public 方法
  * Object v = f.get(people);    // v 是people对象name的值
  * 如果name域是 private 的,那么此处get是有异常的.方法如下:
  * f.setAccessible(true);   // 解除 f 域的安全检查控制,使其可以任意访问
