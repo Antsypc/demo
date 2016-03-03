@@ -24,13 +24,15 @@ import javax.swing.Timer;
 public class AnonymousInnerClassTest
 {
     public static void main(String[] args) {
-        int outInt = 4;
+        final int outInt = 4;
         Bx bx = new Bx() {
             @Override
-            public String get(final int outInt) { // 此处的final也可以不加
+            public String get(final int outInt) {
                 return "get " + outInt + ",匿名内部类使用外部的参数需要使用final.";
             }
         };
+        // 匿名内部类使用外部变量时,只能使用外部final变量的原因:
+        // 如果外部方法执行完毕,那么变量也将消失,这会影响内部类的工作.所以 outInt 必须是final
         System.out.println(bx.get(4));
 
         TalkingClock clock = new TalkingClock();
