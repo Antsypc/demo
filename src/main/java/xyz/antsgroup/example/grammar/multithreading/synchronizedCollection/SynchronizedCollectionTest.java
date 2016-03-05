@@ -1,4 +1,4 @@
-package xyz.antsgroup.example.grammar.multithreading.SynchronizedCollection;
+package xyz.antsgroup.example.grammar.multithreading.synchronizedCollection;
 
 import java.util.ArrayList;
 import java.util.Collections;
