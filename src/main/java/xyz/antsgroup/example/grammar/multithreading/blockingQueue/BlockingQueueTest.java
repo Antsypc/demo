@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  * 使用 锁和条件 机制,是Java并发程序的底层构建,实际编程最好使用更高层次的结构.
  * java.util.concurrent.BlockingQueue 内部实现了同步.
  *
- * 关于队列元素存取的操作方法:
+ * 关于!队列!元素存取的操作方法:
  * 1. 如果队列是用来做线程管理(如生产者消费者中的队列通道),使用put,take方法.当队列满或者空,该线程将会被阻塞等待.
  * 2. 无异常的存取方法:offer,poll.当队列满或空时,返回false,null.
  * 3. 有异常的存取方法:add,remove.(不推荐)

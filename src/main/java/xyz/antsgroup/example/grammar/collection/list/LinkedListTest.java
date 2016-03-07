@@ -3,7 +3,7 @@ package xyz.antsgroup.example.grammar.collection.list;
 import java.util.*;
 
 /**
- * 当元素增删操作多时采用LinkedList,当需要随机访问时采用ArrayList.
+ * 当元素增删操作多时采用LinkedList,当需要随机访问时采用ArrayList,LinkedList可以当做队列或栈使用.
  * List如果访问第n个元素 list.get(n),每次都是从头开始读取选择.
  * 如果只需要一个迭代器读元素: list.iterator();
  * 如果需要一个迭代器对list进行插入,修改,向前遍历操作: list.listIterator();
