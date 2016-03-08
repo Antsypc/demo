@@ -15,26 +15,26 @@ import javax.swing.Timer;
  * 使用 javap -private className 观察编译器实际生成的代码
  * javap -private InnerClassTest.class
  * Compiled from "InnerClassTest.java"
- * public class xyz.antsgroup.example.grammar.innerClass.InnerClassTest {
- * public xyz.antsgroup.example.grammar.innerClass.InnerClassTest();
+ * public class InnerClassTest {
+ * public InnerClassTest();
  * public static void main(java.lang.String[]);
  * }
  *
  * javap -private TalkingClock.class
  * Compiled from "InnerClassTest.java"
- * class xyz.antsgroup.example.grammar.innerClass.TalkingClock {
+ * class TalkingClock {
  * private int interval;
  * private boolean beep;
- * public xyz.antsgroup.example.grammar.innerClass.TalkingClock(int, boolean);
+ * public TalkingClock(int, boolean);
  * public void start();
- * static boolean access$000(xyz.antsgroup.example.grammar.innerClass.TalkingClock);
+ * static boolean access$000(TalkingClock);
  * }
  *
  * javap -private TalkingClock\$TimePrinter.class
  * Compiled from "InnerClassTest.java"
- * public class xyz.antsgroup.example.grammar.innerClass.TalkingClock$TimePrinter implements java.awt.event.ActionListener {
- * final xyz.antsgroup.example.grammar.innerClass.TalkingClock this$0;
- * public xyz.antsgroup.example.grammar.innerClass.TalkingClock$TimePrinter(xyz.antsgroup.example.grammar.innerClass.TalkingClock);
+ * public class TalkingClock$TimePrinter implements java.awt.event.ActionListener {
+ * final TalkingClock this$0;
+ * public TalkingClock$TimePrinter(TalkingClock);
  * public void actionPerformed(java.awt.event.ActionEvent);
  * }
  *

@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @version 1.0 3/7/16
  */
 public class FileIO {
-    private static final String FILENAME = "test.dat";
+    private static final String FILENAME = "grammar/test.dat";
 
     public void writeData(String path, String info) {
 
@@ -33,7 +33,7 @@ public class FileIO {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // 使用 DataOutputStream 输出数字数据
+        // 使用 DataOutputStream 输出数字数据.是以二进制格式输出,所以也只能以二进制方式读DataInputStream.
         try (DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(path, true))){
             byte[] infoByte = info.getBytes();
             outputStream.writeInt(3);           // 该方法的写数据方法并不能在文件中看到正确显示,他有自己的写入规则,
@@ -141,7 +141,7 @@ public class FileIO {
         FileIO fileIO = new FileIO();
 
         // 以下两种方法一次只执行一个,注释另一个
-//        fileIO.writeData(FILENAME, info);
-        fileIO.readData(FILENAME);
+        fileIO.writeData(FILENAME, info);
+//        fileIO.readData(FILENAME);
     }
 }

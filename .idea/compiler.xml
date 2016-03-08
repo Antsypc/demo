@@ -59,9 +59,17 @@
         <processorPath useClasspath="true" />
         <module name="hibernate" />
       </profile>
+      <profile default="false" name="Annotation profile for grammar" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="grammar" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="example" target="1.8" />
+      <module name="grammar" target="1.8" />
       <module name="hibernate" target="1.8" />
       <module name="json" target="1.8" />
       <module name="junit" target="1.8" />
