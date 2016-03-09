@@ -34,12 +34,15 @@ public class FileIO {
             e.printStackTrace();
         }
         // 使用 DataOutputStream 输出数字数据.是以二进制格式输出,所以也只能以二进制方式读DataInputStream.
+        // 由于其根据数据类型输出固定位的字节,int 4位,double 8位,所以解析速度更快.
         try (DataOutputStream outputStream = new DataOutputStream(new FileOutputStream(path, true))){
             byte[] infoByte = info.getBytes();
             outputStream.writeInt(3);           // 该方法的写数据方法并不能在文件中看到正确显示,他有自己的写入规则,
             outputStream.writeDouble(3.111);    // 用read方法读的时候可以看到正确的形式
             outputStream.write(infoByte);
-            outputStream.writeUTF(info);        // 该方法写入的UTF数据会在头部加2byte数据,用readUTF方法可以正确显示
+            outputStream.writeUTF(info);        // 该方法写入的UTF数据会在头部加2byte数据,用readUTF方法可以正确显示.
+                                                // 除非是用于Java虚拟机的字符串,否则都应该用 writeChars()
+            outputStream.writeChars(info);
             outputStream.write('\n');
         } catch (IOException e) {
             e.printStackTrace();
@@ -136,6 +139,18 @@ public class FileIO {
         }
     }
 
+    // RandomAccessFile
+    public void randomAccess(String path) {
+        // RandomAccessFile 的参数可为 "r","w","rw","rwd"(同步保存文件更改),"rws"(同步保存文件更改和文件metadata更改)
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(path, "r")) {
+            String s;
+            while ((s=randomAccessFile.readLine()) != null)
+                System.out.println(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         String info = "abcdefg";
         FileIO fileIO = new FileIO();
@@ -143,5 +158,7 @@ public class FileIO {
         // 以下两种方法一次只执行一个,注释另一个
         fileIO.writeData(FILENAME, info);
 //        fileIO.readData(FILENAME);
+
+        fileIO.randomAccess(FILENAME);
     }
 }
