@@ -82,4 +82,4 @@ java.io.OutputStream的映射，和其类似，Writer类从不直接使用，通
 ## 数据流
 `DataInputStream`
 `DataOutputStream`
-能读写java基本类型和字符串。
+能读写java基本类型和字符串,但是他们都是字节流,如果写入到文件是不可读的.主要用于Java内部,如对象序列化等。
