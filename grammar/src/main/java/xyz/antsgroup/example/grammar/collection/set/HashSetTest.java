@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 从控制台读取 wordsForHashSetTest.txt
+ * $ java HashSetTest < wordsForHashSetTest.txt
  */
 public class HashSetTest
 {
