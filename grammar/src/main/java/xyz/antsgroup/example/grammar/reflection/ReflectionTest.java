@@ -31,7 +31,7 @@ import java.lang.reflect.*;
  * 剩下的和上面一样
  *
  * 获取域的信息:
- * Field[] fields = cl.getDeclaredFields(); // 获取所有的域
+ * Field[] fields = cl.getDeclaredFields(); // 获取所有的域,包括父类的
  * 其他方法与上面一样:类型,名字
  *
  *

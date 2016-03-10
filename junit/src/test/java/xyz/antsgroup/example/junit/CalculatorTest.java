@@ -24,6 +24,9 @@ public class CalculatorTest {
      * assertFalse,assertTrue,
      * assertNotSame,assertSame,
      * assertNotNull,assertNull
+     *
+     * 注意:
+     * 如果是数组一定使用assertArrayEquals,如果使用assertEquals将比较的是内存地址.
      */
 
     @Test
