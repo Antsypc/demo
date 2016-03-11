@@ -8,6 +8,26 @@ import java.util.regex.*;
  */
 public class RegexTest
 {
+    /**
+     * 利用正则表达式获取干净的数字字符串.
+     * @param str
+     * @return
+     */
+    private String parseInt(String str) {
+        Pattern pattern = Pattern.compile("\\s*([+-]?)0*(\\d*).*");
+        Matcher matcher = pattern.matcher(str);
+
+        if (matcher.matches()) {
+            int cout = matcher.groupCount();
+            String syboml = matcher.group(1).equals("-") ? "-" : "+";   // group(1) 是第一组括号的内容
+            String num = matcher.group(2);
+            if (num.isEmpty())
+                return "0";
+            else return syboml + num;
+        }
+        return "0";
+    }
+
     public static void main(String[] args) throws PatternSyntaxException
     {
         Scanner in = new Scanner(System.in);
