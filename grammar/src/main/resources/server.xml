@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Server>
+    <Logger name="tc_log" verbosityLevel="INFORMATION"/>
+
+    <Logger name="servlet_log" path="logs/servlet.log"/>
+
+    <Logger name="JASPER_LOG" path="logs/jasper.log" verbosityLevel="INFORMATION"/>
+
+    <ContextManager debug="0" workDir="work" showDebugInfo="true">
+        <ContextInterceptor className="org.apache.tomcat.context.AutoSetup"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.WebXmlReader"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.LoaderInterceptor"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.DefaultCMSetter"/>
+        <ContextInterceptor
+                className="org.apache.tomcat.context.WorkDirInterceptor"/>
+
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SessionInterceptor"
+                noCookies="false"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SimpleMapper1"
+                debug="0"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.request.InvokerInterceptor"
+                debug="0" prefix="/servlet/"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.request.StaticInterceptor"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.session.StandardSessionInterceptor"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.request.AccessInterceptor"
+                debug="0"/>
+        <RequestInterceptor
+                className="org.apache.tomcat.request.SimpleRealm"
+                debug="0"/>
+
+        <ContextInterceptor
+                className="org.apache.tomcat.context.LoadOnStartupInterceptor"/>
+
+        <Connector className="org.apache.tomcat.service.PoolTcpConnector">
+            <Parameter name="handler"
+                       value="org.apache.tomcat.service.http.HttpConnectionHandler"/>
+            <Parameter name="port"
+                       value="8080"/>
+        </Connector>
+        <Connector className="org.apache.tomcat.service.PoolTcpConnector">
+            <Parameter name="handler"
+                       value="org.apache.tomcat.service.connector.Ajp12ConnectionHandler"/>
+            <Parameter name="port" value="8007"/>
+        </Connector>
+
+        <Context path="/examples"
+                 docBase="webapps/examples"
+                 crossContext="false"
+                 debug="0"
+                 reloadable="true">
+        </Context>
+        <Context path="/admin"
+                 docBase="webapps/admin"
+                 crossContext="true"
+                 debug="0"
+                 reloadable="true"
+                 trusted="false">
+        </Context>
+    </ContextManager>
+    <MyNode><a>aa中文</a>mynode</MyNode>
+</Server>
