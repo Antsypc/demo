@@ -8,7 +8,6 @@ import java.util.*;
  * Map<K, V> 其中K,V不能是原始类型必须是对象.如 int 必须改为 Integer.
  * Map 对象可以获取三个视图:键Set<K> KeySet();值Collection<K> values();键值对Set<Map.Entry<K, V>> entrySet();
  *
- * HashMap: 最常用的Map,它根据键的HashCode 值存储数据,根据键可以直接获取它的值，具有很快的访问速度。HashMap最多只允许一条记录的键为Null(多条会覆盖);允许多条记录的值为 Null。非
  * 首先简单说一下他们之间的区别：
  * HashMap: 最常用的Map,它根据键的HashCode 值存储数据,根据键可以直接获取它的值，具有很快的访问速度。HashMap最多只允许一条记录的键为Null(多条会覆盖);允许多条记录的值为 Null。非同步的。
  * TreeMap: 能够把它保存的记录根据键(key)排序,默认是按升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。TreeMap不允许key的值为null。非同步的。
