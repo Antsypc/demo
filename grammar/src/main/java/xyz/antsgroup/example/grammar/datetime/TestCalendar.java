@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
  * 一个Calendar的实例是系统时间的抽象表示,从Calendar的实例可以知道年月日星期月份时区等信息.Calendar类中有一个静态方法get(int x),通过这个方法可以获取到相关实例的一些值(年月日星期月份等)信息.参数x是一个产量值,在Calendar中有定义.
  *
  * Calendar中些陷阱,很容易掉下去：
- * Calendar的星期是从周日开始的,常量值为0.
+ * Calendar的星期是从周日开始的,常量值为1.
  * Calendar的月份是从一月开始的,常量值为0.
  * Calendar的每个月的第一天值为1.
  */
@@ -60,7 +60,7 @@ public class TestCalendar {
         // 日期的加减运算
         GregorianCalendar gregorianCalendar = new GregorianCalendar(2016, 5, 1);
         gregorianCalendar.add(Calendar.DAY_OF_MONTH, -3);
-        System.out.println(df.format(gregorianCalendar.getTime()));
+        System.out.println(df.format(gregorianCalendar.getTime())); // date.getTime()返回long.但Calendar及子类该方法返回java.util.Date
 
     }
 

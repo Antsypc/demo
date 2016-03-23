@@ -23,7 +23,7 @@ public class TestDate {
         //创建并初始化一个日期(初始值为当前日期)
         Date date = new Date();
         System.out.println("现在的日期是 = " + date.toString());
-        System.out.println("自1970年1月1日0时0分0秒开始至今所经历的毫秒数 = " + date.getTime());
+        System.out.println("自1970年1月1日0时0分0秒开始至今所经历的毫秒数 = " + date.getTime());  // Date.getTime()返回long.但Calendar及子类该方法返回java.util.Date
     }
 
     public static void main(String args[]) {

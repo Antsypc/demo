@@ -1,4 +1,4 @@
-package xyz.antsgroup.example.grammar.xml.dom;
+package xyz.antsgroup.example.xml.dom;
 
 import org.w3c.dom.*;
 
