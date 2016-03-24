@@ -66,6 +66,13 @@
         <processorPath useClasspath="true" />
         <module name="grammar" />
       </profile>
+      <profile default="false" name="Annotation profile for xml" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="xml" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="example" target="1.8" />
@@ -76,6 +83,7 @@
       <module name="logging" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="spring" target="1.8" />
+      <module name="xml" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
