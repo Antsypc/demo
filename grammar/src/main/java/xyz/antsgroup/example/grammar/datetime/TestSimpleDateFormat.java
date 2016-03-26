@@ -16,7 +16,7 @@ public class TestSimpleDateFormat {
         DateFormat df1 = DateFormat.getInstance();
         DateFormat df2 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss EE");
         DateFormat df3 = DateFormat.getDateInstance(DateFormat.FULL, Locale.CHINA);     //产生一个指定国家指定长度的日期格式,长度不同,显示的日期完整性也不同
-        DateFormat df4 = new SimpleDateFormat("yyyy年MM月dd日 hh时mm分ss秒 EE", Locale.CHINA);
+        DateFormat df4 = new SimpleDateFormat("yyyy年MM月dd日 hh时mm分ss秒 EE", Locale.CHINA);    // h小写表示12小时制,大小表示24小时制
         DateFormat df5 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss EEEEEE", Locale.US);
         DateFormat df6 = new SimpleDateFormat("yyyy-MM-dd");
         DateFormat df7 = new SimpleDateFormat("yyyy年MM月dd日");
@@ -24,7 +24,7 @@ public class TestSimpleDateFormat {
         //将日期按照格式进行输出
         System.out.println("-------将日期按照不同格式进行输出------");
         System.out.println("按照Java默认的日期格式,默认的区域                      : " + df1.format(date));
-        System.out.println("按照指定格式 yyyy-MM-dd hh:mm:ss EE ,系统默认区域      :" + df2.format(date));
+        System.out.println("按照指定格式 yyyy-MM-dd HH:mm:ss EE ,系统默认区域      :" + df2.format(date));
         System.out.println("按照日期的FULL模式,区域设置为中文                      : " + df3.format(date));
         System.out.println("按照指定格式 yyyy年MM月dd日 hh时mm分ss秒 EE ,区域为中文 : " + df4.format(date));
         System.out.println("按照指定格式 yyyy-MM-dd hh:mm:ss EE ,区域为美国        : " + df5.format(date));
