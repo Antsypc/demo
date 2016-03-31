@@ -38,6 +38,20 @@
                 </configuration>
             </plugin>
 
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<version>2.5</version>-->
+                <!--<configuration>-->
+                    <!--<webResources>-->
+                        <!--<resource>-->
+                            <!--&lt;!&ndash; 主要解决 web 项目中找不到 web.xml,指定器路径 &ndash;&gt;-->
+                            <!--<directory>web</directory>-->
+                        <!--</resource>-->
+                    <!--</webResources>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
         </plugins>
     </build>
 
