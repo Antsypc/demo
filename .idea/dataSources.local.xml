@@ -7,5 +7,11 @@
       <schema-pattern>labms.*</schema-pattern>
       <default-schemas>labms.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - mytest@localhost" uuid="ba3883f7-d174-47a1-88f4-52718f90531b">
+      <secret-storage>memory</secret-storage>
+      <user-name>ypc</user-name>
+      <schema-pattern>mytest.*</schema-pattern>
+      <default-schemas>mytest.*</default-schemas>
+    </data-source>
   </component>
 </project>

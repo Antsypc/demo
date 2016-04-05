@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - labms@localhost" uuid="e247512c-b2f8-4163-9ecd-4ad0984828f0">
-    <database-info product="MySQL" version="5.6.16-1~exp1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
+    <database-info product="MySQL" version="5.6.28-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
@@ -144,11 +144,6 @@
       <column name="nativePlace" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="teacherId"/>
     </table>
-    <table name="test" schema="" catalog="labms" type="TABLE">
-      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
-      <column name="a_b" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
     <procedure name="free_lab_by_campus_day" schema="" catalog="labms" type="1">
       <prototype>
         <parameter name="c" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
@@ -172,5 +167,65 @@
         <parameter name="sid" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
       </prototype>
     </procedure>
+  </data-source>
+  <data-source name="MySQL - mytest@localhost" uuid="ba3883f7-d174-47a1-88f4-52718f90531b">
+    <database-info product="MySQL" version="5.6.28-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="mytest"/>
+    <table name="INVENTORY" schema="" catalog="mytest" type="TABLE">
+      <column name="WarehouseID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="SKU" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="SKU_Description" sqlType="VARCHAR" precision="35" scale="0" nullable="false" jdbcType="12"/>
+      <column name="QuantityOnHand" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="QuantityOnOrder" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="WarehouseID,SKU"/>
+      <foreign-key name="INVENTORY_ibfk_1" columns="WarehouseID" ref-table="WAREHOUSE" ref-schema="" ref-catalog="mytest" ref-columns="WarehouseID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="INVENTORY_ibfk_2" columns="SKU" ref-table="SKU_DATA" ref-schema="" ref-catalog="mytest" ref-columns="SKU" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="SKU_DATA" schema="" catalog="mytest" type="TABLE">
+      <column name="SKU" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="SKU_Description" sqlType="VARCHAR" precision="80" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Department" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Buyer" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="SKU"/>
+      <exported-key name="INVENTORY_ibfk_2" table="INVENTORY" schema="" catalog="mytest" columns="SKU"/>
+    </table>
+    <table name="WAREHOUSE" schema="" catalog="mytest" type="TABLE">
+      <column name="WarehouseID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="WarehouseCity" sqlType="CHAR" precision="30" scale="0" nullable="false" jdbcType="1"/>
+      <column name="WarehouseState" sqlType="CHAR" precision="2" scale="0" nullable="false" jdbcType="1"/>
+      <column name="Manager" sqlType="VARCHAR" precision="35" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SquareFeet" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="WarehouseID"/>
+      <exported-key name="INVENTORY_ibfk_1" table="INVENTORY" schema="" catalog="mytest" columns="WarehouseID"/>
+    </table>
+    <table name="cannull" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="word" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="word" unique="true" columns="word"/>
+    </table>
+    <table name="empty_table" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+    </table>
+    <table name="limit_try" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="s" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="mybatis_test" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="des" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="user" schema="" catalog="mytest" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="age" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
   </data-source>
 </component>
