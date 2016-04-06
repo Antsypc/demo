@@ -3,6 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <settings>
+        <setting name="LogImpl" value="LOG4J2"/>
+    </settings>
+    <!-- 使用别名,避免输入太长的包名.注意,该操作会替换所有单独的单词 UserEntity -->
+    <typeAliases>
+        <typeAlias type="xyz.antsgroup.demo.mybatis.UserEntity" alias="UserEntity"/>
+    </typeAliases>
+
+
+    <!-- 在应用程序中选择使用那种环境 -->
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -14,6 +24,10 @@
             </dataSource>
         </environment>
     </environments>
+
+
+
+
     <mappers>
         <mapper resource="UserEntityMapper.xml"/>
     </mappers>
