@@ -16,20 +16,20 @@
         <!--<property name="hibernate.current_session_context_class">thread</property> thread表示本地事务,jta表示全局事务.在希望使用current_session的时候 -->
 
         <mapping resource="labms.hbm.xml"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.CategoryEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.ConsumablesEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.ConsumablesUsageEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.CourseEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.CourseChooseLogEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentMaintenanceEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.EquipmentUsageEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.LabManagerEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.LabRoomEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.LabRoomUsageEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.ScoreEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.StudentEntity"/>
-        <mapping class="xyz.antsgroup.example.hibernate.entity.TeacherEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.CategoryEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.ConsumablesEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.ConsumablesUsageEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.CourseEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.CourseChooseLogEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.EquipmentEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.EquipmentMaintenanceEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.EquipmentUsageEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.LabManagerEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.LabRoomEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.LabRoomUsageEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.ScoreEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.StudentEntity"/>
+        <mapping class="xyz.antsgroup.demo.hibernate.entity.TeacherEntity"/>
 
 
         <!-- DB schema will be updated if needed -->

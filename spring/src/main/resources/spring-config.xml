@@ -6,13 +6,13 @@
     <!-- 配置bean -->
     <!-- spring3种注入方式:完成对象的构造 -->
     <!-- 1.属性注入，最常用 -->
-    <bean id="hello1" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+    <bean id="hello1" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
         <!-- 调用相应set函数，把name设置为ypc -->
         <property name="name" value="ypc" />
     </bean>
 
     <!-- 2.构造方法注入:依次对构造方法的参数赋值 -->
-    <bean id="hello2" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+    <bean id="hello2" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
         <!-- 调用构造函数　-->
         <!-- type指定调用的构造函数的第三个参数是int -->
         <constructor-arg value="df"/>
@@ -20,7 +20,7 @@
         <constructor-arg value="30" type="int"/>
     </bean>
 
-    <bean id="hello3" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+    <bean id="hello3" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
         <!-- 调用构造函数　-->
         <!-- index指定该参数在构造函数参数中的位置 -->
         <!-- 如果字面值中有特殊字符时，用CDATA -->
@@ -34,18 +34,18 @@
     </bean>
 
 
-    <bean id="car1" class="xyz.antsgroup.example.spring.hello.Car">
+    <bean id="car1" class="xyz.antsgroup.demo.spring.hello.Car">
         <property name="info" value="haoche"/>
         <property name="name" value="BMW"/>
     </bean>
     <!--一个对象中有另一对象的实例，用ref指定对象，或者使用内部bean-->
-    <bean id="hello4" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+    <bean id="hello4" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
         <property name="name" value="ljf"/>
         <property name="myCar" ref="car1"/>
         <!--上一行也可以写成如下-->
         <!--
         <property name="myCar">
-            <bean class="xyz.antsgroup.example.spring.hello.Car">
+            <bean class="Car">
                 <property name="info" value="haoche"></property>
                 <property name="name" value="BMW"></property>
             </bean>
@@ -54,7 +54,7 @@
     </bean>
 
     <!--为级联属性赋值，即为对象中的对象的属性赋值-->
-    <bean id="hello5" class="xyz.antsgroup.example.spring.hello.HelloWorld">
+    <bean id="hello5" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
         <property name="name" value="gwc"/>
         <property name="myCar" ref="car1"/>
         <!--保证Car有info的set函数-->
@@ -63,7 +63,7 @@
 
     <!--通过p命名空间为bean属性赋值，更简洁-->
     <!--
-    <bean id="hellox" class="xyz.antsgroup.example.spring.hello.Car" p:name="BYD" p:myCar="car1"/>
+    <bean id="hellox" class="Car" p:name="BYD" p:myCar="car1"/>
     -->
 
     <!--

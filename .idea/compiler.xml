@@ -75,6 +75,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="demo-basic" target="1.8" />
       <module name="example" target="1.8" />
       <module name="grammar" target="1.8" />
       <module name="hibernate" target="1.8" />

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="xyz.antsgroup.example.mybatis.UserEntity">
+<mapper namespace="xyz.antsgroup.demo.mybatis.UserEntity">
     <!--
     在select标签中编写查询的SQL语句， 设置select标签的id属性为getMybatisTest，id属性值必须是唯一的，不能够重复
     使用parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型
@@ -12,7 +12,7 @@
     <!--
         根据id查询得到一个 MybatisTest 对象
      -->
-    <select id="getUserEntity" resultType="xyz.antsgroup.example.mybatis.UserEntity">
+    <select id="getUserEntity" resultType="xyz.antsgroup.demo.mybatis.UserEntity">
         select * from user where id = #{id}
     </select>
 </mapper>

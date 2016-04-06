@@ -5,7 +5,7 @@
 <hibernate-mapping>
 
 
-    <class name="xyz.antsgroup.example.hibernate.entity.CategoryEntity" table="category" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.CategoryEntity" table="category" schema="" catalog="labms">
         <id name="categoryId">
             <column name="categoryId" sql-type="int" not-null="true"/>
         </id>
@@ -16,7 +16,7 @@
             <column name="parent" sql-type="int"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.ConsumablesEntity" table="consumables" schema=""
+    <class name="xyz.antsgroup.demo.hibernate.entity.ConsumablesEntity" table="consumables" schema=""
            catalog="labms">
         <id name="consumablesId">
             <column name="consumablesId" sql-type="varchar" not-null="true"/>
@@ -32,7 +32,7 @@
             <column name="unit" sql-type="varchar" length="20" not-null="true"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.ConsumablesUsageEntity" table="consumablesUsage" schema=""
+    <class name="xyz.antsgroup.demo.hibernate.entity.ConsumablesUsageEntity" table="consumablesUsage" schema=""
            catalog="labms">
         <id name="consumablesUsageId">
             <column name="consumablesUsageId" sql-type="int" not-null="true"/>
@@ -56,7 +56,7 @@
             <column name="description" sql-type="text" length="65535"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.CourseEntity" table="course" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.CourseEntity" table="course" schema="" catalog="labms">
         <id name="courseId">
             <column name="courseId" sql-type="int" not-null="true"/>
         </id>
@@ -85,7 +85,7 @@
             <column name="description" sql-type="text" length="65535"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.CourseChooseLogEntity" table="courseChooseLog" schema=""
+    <class name="xyz.antsgroup.demo.hibernate.entity.CourseChooseLogEntity" table="courseChooseLog" schema=""
            catalog="labms">
         <id name="courseChooseLogId">
             <column name="courseChooseLogId" sql-type="int" not-null="true"/>
@@ -100,7 +100,7 @@
             <column name="time" sql-type="int"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentEntity" table="equipment" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.EquipmentEntity" table="equipment" schema="" catalog="labms">
         <id name="equipmentId">
             <column name="equipmentId" sql-type="varchar" not-null="true"/>
         </id>
@@ -120,7 +120,7 @@
             <column name="isOk" sql-type="tinyint" not-null="true"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentMaintenanceEntity" table="equipmentMaintenance"
+    <class name="xyz.antsgroup.demo.hibernate.entity.EquipmentMaintenanceEntity" table="equipmentMaintenance"
            schema="" catalog="labms">
         <id name="equipmentMaintenanceId">
             <column name="equipmentMaintenanceId" sql-type="int" not-null="true"/>
@@ -150,7 +150,7 @@
             <column name="returnDescription" sql-type="text" length="65535"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.EquipmentUsageEntity" table="equipmentUsage" schema=""
+    <class name="xyz.antsgroup.demo.hibernate.entity.EquipmentUsageEntity" table="equipmentUsage" schema=""
            catalog="labms">
         <id name="equipmentUsageId">
             <column name="equipmentUsageId" sql-type="int" not-null="true"/>
@@ -168,7 +168,7 @@
             <column name="time" sql-type="int" not-null="true"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.LabManagerEntity" table="labManager" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.LabManagerEntity" table="labManager" schema="" catalog="labms">
         <id name="labManagerId">
             <column name="labManagerId" sql-type="char" length="8" not-null="true"/>
         </id>
@@ -191,7 +191,7 @@
             <column name="email" sql-type="varchar" length="30"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.LabRoomEntity" table="labRoom" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.LabRoomEntity" table="labRoom" schema="" catalog="labms">
         <id name="labRoomId">
             <column name="labRoomId" sql-type="char" length="7" not-null="true"/>
         </id>
@@ -217,7 +217,7 @@
             <column name="managerName" sql-type="varchar" length="20"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.LabRoomUsageEntity" table="labRoomUsage" schema=""
+    <class name="xyz.antsgroup.demo.hibernate.entity.LabRoomUsageEntity" table="labRoomUsage" schema=""
            catalog="labms">
         <id name="labRoomUsageId">
             <column name="labRoomUsageId" sql-type="int" not-null="true"/>
@@ -247,8 +247,8 @@
             <column name="description" sql-type="varchar" length="30"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.ScoreEntity" table="score" schema="" catalog="labms">
-        <composite-id mapped="true" class="xyz.antsgroup.example.hibernate.entity.ScoreEntityPK">
+    <class name="xyz.antsgroup.demo.hibernate.entity.ScoreEntity" table="score" schema="" catalog="labms">
+        <composite-id mapped="true" class="xyz.antsgroup.demo.hibernate.entity.ScoreEntityPK">
             <key-property name="studentId">
                 <column name="studentId" sql-type="char" length="13" not-null="true"/>
             </key-property>
@@ -260,7 +260,7 @@
             <column name="stuScore" sql-type="char" length="6" not-null="true"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.StudentEntity" table="student" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.StudentEntity" table="student" schema="" catalog="labms">
         <id name="studentId">
             <column name="studentId" sql-type="char" length="13" not-null="true"/>
         </id>
@@ -295,7 +295,7 @@
             <column name="email" sql-type="varchar" length="30"/>
         </property>
     </class>
-    <class name="xyz.antsgroup.example.hibernate.entity.TeacherEntity" table="teacher" schema="" catalog="labms">
+    <class name="xyz.antsgroup.demo.hibernate.entity.TeacherEntity" table="teacher" schema="" catalog="labms">
         <id name="teacherId">
             <column name="teacherId" sql-type="char" length="8" not-null="true"/>
         </id>

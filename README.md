@@ -8,3 +8,4 @@ Example Project
 * [logging](logging) log4j
 * [junit](junit)
 * [json](json) jackson2
+* [mybatis](mybatis) 
