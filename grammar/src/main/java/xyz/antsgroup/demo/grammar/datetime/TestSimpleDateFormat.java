@@ -20,6 +20,7 @@ public class TestSimpleDateFormat {
         DateFormat df5 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss EEEEEE", Locale.US);
         DateFormat df6 = new SimpleDateFormat("yyyy-MM-dd");
         DateFormat df7 = new SimpleDateFormat("yyyy年MM月dd日");
+        DateFormat df8 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");                      // 大小写字母是保留字符,如果需要用需要用单引号
 
         //将日期按照格式进行输出
         System.out.println("-------将日期按照不同格式进行输出------");

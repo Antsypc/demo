@@ -13,11 +13,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$USER_HOME$/Downloads/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
     <data-source source="LOCAL" name="MySQL - mytest@localhost" uuid="ba3883f7-d174-47a1-88f4-52718f90531b">
       <driver-ref>mysql</driver-ref>
@@ -31,11 +27,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$USER_HOME$/Downloads/mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
   </component>
 </project>

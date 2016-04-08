@@ -1,8 +1,8 @@
-Example Project
-===================
-这是我的示例项目.项目使用maven管理.
+Demo Project For Java
+=====================
+This is my personal demo for Java, written by IntelliJ IDEA, processed by Maven.
 
-## 已有项目
+## Exiting Project
 * [grammar](grammar)
 * [xml](xml)
 * [logging](logging) log4j
