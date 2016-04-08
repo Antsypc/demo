@@ -24,12 +24,13 @@ public class MybatisTest {
         //构建sqlSession的工厂
         //SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(reader);
         //创建能执行映射文件中sql的sqlSession
-        SqlSession session = sessionFactory.openSession();
+        SqlSession session = sessionFactory.openSession();  // 默认开启事务,不自动提交
 
         // UserEntityMapper 中 namespace + 对应 select 标签的 id.
         String statement = "UserEntity.getUserEntity";//映射sql的标识字符串
         //执行查询返回一个唯一user对象的sql
         UserEntity user = session.selectOne(statement, 1);
         System.out.println(user);
+        session.close();    // 一定要关闭
     }
 }

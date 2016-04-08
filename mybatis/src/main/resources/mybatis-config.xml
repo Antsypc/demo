@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <settings>
-        <setting name="LogImpl" value="LOG4J2"/>
+        <setting name="logImpl" value="LOG4J2"/>
     </settings>
     <!-- 使用别名,避免输入太长的包名.注意,该操作会替换所有单独的单词 UserEntity -->
     <typeAliases>
