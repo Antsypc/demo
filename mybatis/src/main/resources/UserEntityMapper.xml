@@ -15,4 +15,22 @@
     <select id="getUserEntity" resultType="UserEntity">
         select * from user where id = #{id}
     </select>
+
+    <!--
+    两点注意:
+    1. 如果SQL语句的引号中间需要传入值,不能直接写成 '#{name}',应该使用CONCAT函数.
+    2. 如果需要比较字符串,应该使用''.toString().
+    -->
+    <select id="getUserEntity" resultType="UserEntity">
+        SELECT *
+       FROM "user"
+        <where>
+            <if test="name != null">
+                name LIKE CONCAT('%',#{name}, '%')
+            </if>
+            <if test="name == 'Yang'.toString()">
+                AND age > 10
+            </if>
+        </where>
+    </select>
 </mapper>
