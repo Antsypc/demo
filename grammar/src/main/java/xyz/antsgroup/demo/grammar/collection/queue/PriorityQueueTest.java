@@ -3,6 +3,9 @@ package xyz.antsgroup.demo.grammar.collection.queue;
 import java.util.*;
 
 /**
+ * 优先队列 PriorityQueue 相当与堆结构.
+ * 始终返回最小的元素,如果需要始终返回最大的元素,在构造是传入 Comparator 接口的方法.
+ *
  * 基本队列是Queue接口,LinkedList也是实现了这个接口的,优先级队列PriorityQueue.
  * 双端队列接口Deque,实现了该接口的类有LinkedList,ArrayDeque...
  * 由此看出,需要使用队列时,LinkedList 是很好的选择
@@ -24,9 +27,12 @@ public class PriorityQueueTest
         pq.add(new GregorianCalendar(1903, Calendar.DECEMBER, 3)); // J. von Neumann
         pq.add(new GregorianCalendar(1910, Calendar.JUNE, 22)); // K. Zuse
 
+        // 遍历不保证顺序
         System.out.println("Iterating over elements...");
         for (GregorianCalendar date : pq)
             System.out.println(date.get(Calendar.YEAR));
+
+        // 优先队列 PriorityQueue 始终返回最小的元素
         System.out.println("Removing elements...");
         while (!pq.isEmpty())
             System.out.println(pq.remove().get(Calendar.YEAR));
