@@ -5,8 +5,8 @@ Java 集合类总结
 - `java.util.AbstractCollection<E> (implements java.util.Collection<E>)`
     - `java.util.AbstractList<E> (implements java.util.List<E>)`
         - `java.util.AbstractSequentialList<E>`
-        - `java.util.LinkedList<E> (implements java.lang.Cloneable, java.util.Deque<E>, java.util.List<E>, java.io.Serializable)` 底层用双向循环链表实现的List.
-        - `java.util.ArrayList<E> (implements java.lang.Cloneable, java.util.List<E>, java.util.RandomAccess, java.io.Serializable)`
+        - `java.util.LinkedList<E> (implements java.lang.Cloneable, java.util.Deque<E>, java.util.List<E>, java.io.Serializable)` 用双向循环链表实现的List.
+        - `java.util.ArrayList<E> (implements java.lang.Cloneable, java.util.List<E>, java.util.RandomAccess, java.io.Serializable)` 内部是用数组存储实现的,适合需要大量随机访问,不太需要插入删除操作的情况
         - `java.util.Vector<E> (implements java.lang.Cloneable, java.util.List<E>, java.util.RandomAccess, java.io.Serializable)`
         - `java.util.Stack<E>`
     - `java.util.AbstractQueue<E> (implements java.util.Queue<E>)`
