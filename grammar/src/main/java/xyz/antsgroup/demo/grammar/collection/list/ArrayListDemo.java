@@ -14,9 +14,12 @@ public class ArrayListDemo {
     public static void main(String[] args) {
         /**
          * 构造方法
+         * ArrayList 大小自动调增,当不够时采用复制原来的元素到1.5倍空间的新数组,
+         * 所以代价很大,最好能估算合适大小.
          */
         ArrayList<String> list = new ArrayList<>();
-        ArrayList<String> list0 = new ArrayList<>(20);  // 初始化容量,默认是10
+        ArrayList<String> list0 = new ArrayList<>(20);  // 初始化容量,默认是10.
+        list0.ensureCapacity(100);  // 如果原本有元素就拷贝到一个容量为100的新数组,如果原本数组容量大于100,放弃容量改变
         ArrayList<String> list1 = new ArrayList<>(new ArrayList<>());   // 可以用另外一个 Collection 初始化,执行数组拷贝到新数组
 
         /**
