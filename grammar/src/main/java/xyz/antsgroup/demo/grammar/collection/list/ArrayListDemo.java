@@ -50,7 +50,12 @@ public class ArrayListDemo {
         /**
          * 遍历
          */
-        // for-each
+        // for : 由于可以直接数组索引找,所以从效率上可能比 for-each 还要快
+        for (int i = 0, len = list.size(); i < len; i++) {
+            System.out.println(list.get(i));
+        }
+
+        // for-each : 本质是 Iterator, 但是 for-each 不能对元素 remove
         list.add("a");
         list.add("d");
         for (String s : list)

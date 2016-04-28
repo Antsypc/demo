@@ -22,7 +22,7 @@ import java.util.*;
  * List的操作不是线程安全的,而Vector操作是线程安全是同步的.
  */
 
-public class LinkedListTest {
+public class LinkedListDemo {
     public static void main(String[] args) {
         List<String> a = new LinkedList<>();
         a.add("Amy");
