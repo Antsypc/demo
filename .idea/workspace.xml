@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64e817db-1b3c-42ff-9bd7-4aaba3e1a4f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,12 +46,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.45454547">
-                <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+              <first_editor vertical-scroll-proportion="0.3529412">
+                <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -63,15 +62,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VectorDemo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/VectorDemo.java">
+      <file leaf-file-name="StackDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/StackDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46601942">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Stack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Vector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="554" column="29" selection-start-line="554" selection-start-column="29" selection-end-line="554" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/LinkedListDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -124,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/string/RegularExpression.md" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/collection/CollectionTransform.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/string/HrefMatch.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/string/RegexTest.java" />
@@ -174,6 +189,7 @@
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/ArrayListDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/LinkedListDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/VectorDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/StackDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
       </list>
     </option>
@@ -995,12 +1011,12 @@
       <workItem from="1461757509257" duration="606000" />
       <workItem from="1461804934630" duration="665000" />
       <workItem from="1461840179994" duration="9827000" />
-      <workItem from="1461906105644" duration="4549000" />
+      <workItem from="1461906105644" duration="5200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348113000" />
+    <option name="totallyTimeSpent" value="348764000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,20 +1097,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46601942">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.jar!/org/apache/ibatis/session/SqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04157044">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mybatis/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1438,39 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/LinkedListDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0226538">
-          <caret line="156" column="17" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
-          <folding>
-            <element signature="e#5671#5672#0" expanded="true" />
-            <element signature="e#5695#5696#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.45454547">
-            <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/VectorDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46601942">
@@ -1480,6 +1449,52 @@
             <element signature="e#393#394#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/LinkedListDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="554" column="29" selection-start-line="554" selection-start-column="29" selection-end-line="554" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/StackDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.3529412">
+            <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
