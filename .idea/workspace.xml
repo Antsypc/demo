@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e817db-1b3c-42ff-9bd7-4aaba3e1a4f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
     </list>
     <ignored path="example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +50,8 @@
         <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.5775401">
-                <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <first_editor vertical-scroll-proportion="0.80748665">
+                <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -63,53 +62,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PriorityQueueDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java">
+      <file leaf-file-name="LinkedListDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/LinkedListDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding>
-                <element signature="e#561#591#1" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-              </folding>
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PriorityQueue.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/PriorityQueue.java">
+      <file leaf-file-name="ArrayDequeDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/ArrayDequeDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="585" column="13" selection-start-line="585" selection-start-column="13" selection-end-line="585" selection-end-column="13" />
-              <folding>
-                <element signature="docComment;field#queue#0;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;field#size#0;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;field#comparator#0;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;field#modCount#0;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;method#PriorityQueue#0;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;method#PriorityQueue#1;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;method#PriorityQueue#2;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;method#PriorityQueue#3;class#PriorityQueue#0" expanded="false" />
-                <element signature="docComment;method#PriorityQueue#4;class#PriorityQueue#0" expanded="false" />
-                <element signature="e#12969#12970#0" expanded="true" />
-                <element signature="e#13025#13026#0" expanded="true" />
-                <element signature="e#28862#28863#0" expanded="true" />
-                <element signature="e#28932#28933#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractCollection.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/AbstractCollection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-              <folding>
-                <element signature="e#8767#8768#0" expanded="true" />
-                <element signature="e#8824#8825#0" expanded="true" />
-              </folding>
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,8 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/string/HrefMatch.java" />
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/string/RegexTest.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/xml/TreeViewer.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/xml/server.xml" />
         <option value="$PROJECT_DIR$/grammar/target/classes/server.xml" />
@@ -184,10 +150,12 @@
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/ArrayListDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/VectorDemo.java" />
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/LinkedListDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/list/StackDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/LinkedListDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/ArrayDequeDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
       </list>
     </option>
   </component>
@@ -213,6 +181,40 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="demo-grammar" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="demo-grammar" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="demo-basic" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -450,7 +452,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="queue" />
+              <option name="myItemId" value="set" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,7 +490,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
+              <option name="myItemId" value="queue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1008,12 +1010,12 @@
       <workItem from="1461757509257" duration="606000" />
       <workItem from="1461804934630" duration="665000" />
       <workItem from="1461840179994" duration="9827000" />
-      <workItem from="1461906105644" duration="13204000" />
+      <workItem from="1461906105644" duration="14766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356768000" />
+    <option name="totallyTimeSpent" value="358330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1042,7 +1044,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30246913" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32350597" sideWeight="0.34104937" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23346613" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3243028" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3059761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.49382716" order="1" side_tool="false" content_ui="tabs" />
@@ -1094,20 +1096,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/junit/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/reflection/ReflectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="6" selection-start-line="135" selection-start-column="6" selection-end-line="135" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/string/RegexTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1470,31 +1458,47 @@
             <element signature="docComment;method#PriorityQueue#2;class#PriorityQueue#0" expanded="false" />
             <element signature="docComment;method#PriorityQueue#3;class#PriorityQueue#0" expanded="false" />
             <element signature="docComment;method#PriorityQueue#4;class#PriorityQueue#0" expanded="false" />
-            <element signature="e#12969#12970#0" expanded="true" />
-            <element signature="e#13025#13026#0" expanded="true" />
-            <element signature="e#28862#28863#0" expanded="true" />
-            <element signature="e#28932#28933#0" expanded="true" />
+            <element signature="e#12969#12970#0" expanded="false" />
+            <element signature="e#13025#13026#0" expanded="false" />
+            <element signature="e#28862#28863#0" expanded="false" />
+            <element signature="e#28932#28933#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.058252428">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding>
-            <element signature="e#561#591#1" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#561#591#1" expanded="false" />
+            <element signature="e#742#743#0" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/LinkedListDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/ArrayDequeDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.5775401">
-            <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <first_editor vertical-scroll-proportion="0.80748665">
+            <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
