@@ -4,6 +4,8 @@ import java.util.Stack;
 
 /**
  * Stack 继承自 Vector,线程安全的栈.
+ * 由于 Vector 内部是数组实现,所以判断 stack 是否为空不能通过返回是否为 null 来判断,应该用 empty().
+ *
  * @author ants_ypc
  * @version 1.0 4/29/16
  */
