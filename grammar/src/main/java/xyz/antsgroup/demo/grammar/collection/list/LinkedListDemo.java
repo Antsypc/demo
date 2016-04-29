@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 当元素**增删**操作多时采用LinkedList,当需要随机访问时采用ArrayList,LinkedList可以当做队列或栈使用.
+ * 把 LinkedList 当队列,栈使用时不要添加 null 元素,因为他是根据 null 判断队列是否为空的.
  */
 
 public class LinkedListDemo {
@@ -93,6 +94,8 @@ public class LinkedListDemo {
          * 2. 获取首尾元素(没有则返回 null): peekFirst,peekLast.  有异常的是getFirst,getLast.
          * 3. 获取首尾元素并删除: pollFirst,pollLast.
          *
+         * 把 LinkedList 当队列,栈使用时不要添加 null 元素,因为他是根据 null 判断队列是否为空的.
+         *
          */
         // 向头部加
         list.addFirst("head");
@@ -124,7 +127,6 @@ public class LinkedListDemo {
         // 获取尾部并删除
         String tail = list.pollLast();      // 没有则返回 null
                tail = list.removeLast();    // 没有会抛出异常
-
 
     }
 }

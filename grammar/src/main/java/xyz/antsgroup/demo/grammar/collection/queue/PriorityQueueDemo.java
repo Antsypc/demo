@@ -17,7 +17,7 @@ import java.util.*;
  * 4. 只是用来获取头元素:element空则有异常,peek空则是null.
  * 注意:poll和peek是通过判断null来判断队列是否为空,所以通过这种方式存取元素就不要存null.
  */
-public class PriorityQueueTest
+public class PriorityQueueDemo
 {
     public static void main(String[] args)
     {
