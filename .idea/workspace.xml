@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e817db-1b3c-42ff-9bd7-4aaba3e1a4f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/LinkedHashSetDemo.java" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/LinkedHashSetDemo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
     </list>
     <ignored path="example.iws" />
@@ -53,8 +55,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.7058824">
-                <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+              <first_editor vertical-scroll-proportion="0.8663102">
+                <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -62,25 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java">
+      <file leaf-file-name="LinkedHashMapDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="52" selection-end-column="9" />
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding>
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#417#418#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,10 +78,30 @@
         <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="25" />
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkedHashMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/LinkedHashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="347" column="28" selection-start-line="347" selection-start-column="28" selection-end-line="347" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/xml/dom/XmlParse.java" />
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/collection/queue/PriorityQueueTest.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/datetime/README.md" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/datetime/TestDate.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/datetime/TestCalendar.java" />
@@ -185,6 +192,8 @@
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/TreeSetDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/EnumSetDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMap.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
       </list>
     </option>
@@ -540,7 +549,7 @@
       <recent name="xyz.antsgroup.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HashMapDemo">
+  <component name="RunManager" selected="Application.LinkedHashMapDemo">
     <configuration default="false" name="PriorityQueueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -549,26 +558,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.queue.PriorityQueueDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="grammar" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="LinkedListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="xyz.antsgroup.demo.grammar.collection.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.list.LinkedListDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -629,6 +618,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.map.HashMapDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="grammar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LinkedHashMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xyz.antsgroup.demo.grammar.collection.map.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.map.LinkedHashMapDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -895,18 +904,18 @@
       <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.addTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.PriorityQueueDemo" />
-      <item index="3" class="java.lang.String" itemvalue="Application.LinkedListDemo" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
-      <item index="5" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
-      <item index="6" class="java.lang.String" itemvalue="Application.HashMapDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.HashMapDemo" />
+      <item index="6" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.HashMapDemo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
-        <item index="3" class="java.lang.String" itemvalue="Application.PriorityQueueDemo" />
-        <item index="4" class="java.lang.String" itemvalue="Application.LinkedListDemo" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.HashMapDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PriorityQueueDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -1007,12 +1016,12 @@
       <workItem from="1461804934630" duration="665000" />
       <workItem from="1461840179994" duration="9827000" />
       <workItem from="1461906105644" duration="15250000" />
-      <workItem from="1461982592751" duration="12228000" />
+      <workItem from="1461982592751" duration="13963000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371042000" />
+    <option name="totallyTimeSpent" value="372777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1041,7 +1050,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30246913" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32350597" sideWeight="0.34104937" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3243028" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30677292" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3059761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1093,20 +1102,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/Spliterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1229774">
-          <caret line="506" column="51" selection-start-line="506" selection-start-column="41" selection-end-line="506" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.605178">
-          <caret line="462" column="0" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/lang/Exception.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61165047">
@@ -1355,8 +1350,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="65" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="65" />
           <folding>
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
+            <element signature="e#396#397#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1463,17 +1458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1487,10 +1471,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23300971">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="52" selection-end-column="9" />
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="347" column="28" selection-start-line="347" selection-start-column="28" selection-end-line="347" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1498,10 +1501,18 @@
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="25" />
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,8 +1522,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.7058824">
-            <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+          <first_editor vertical-scroll-proportion="0.8663102">
+            <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
