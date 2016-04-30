@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e817db-1b3c-42ff-9bd7-4aaba3e1a4f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" afterPath="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="example.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,65 +63,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeMapDemo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/TreeMapDemo.java">
+      <file leaf-file-name="IdentityHashMapDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/IdentityHashMapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8252427">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37864077">
+              <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1354#1381#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SortedSet.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/SortedSet.java">
+      <file leaf-file-name="IdentityHashMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/IdentityHashMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-              <folding />
+              <caret line="656" column="16" selection-start-line="656" selection-start-column="16" selection-end-line="656" selection-end-column="16" />
+              <folding>
+                <element signature="e#8408#8409#0" expanded="true" />
+                <element signature="e#8446#8447#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PriorityQueueDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/queue/PriorityQueueDemo.java">
+      <file leaf-file-name="TreeMapDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/TreeMapDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/TreeMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="890" column="18" selection-start-line="890" selection-start-column="18" selection-end-line="890" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavigableMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/NavigableMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TreeSetDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/TreeSetDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1354#1381#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,16 +109,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedHashMapDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/datetime/TestDate.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/datetime/TestCalendar.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/example/grammar/xml/README.md" />
         <option value="$PROJECT_DIR$/xml/src/main/java/xyz/antsgroup/example/xml/README.md" />
@@ -219,9 +183,10 @@
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/set/EnumSetDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMap.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java" />
-        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java" />
         <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/TreeMapDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/IdentityHashMapDemo.java" />
+        <option value="$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md" />
       </list>
     </option>
   </component>
@@ -652,27 +617,7 @@
       <recent name="xyz.antsgroup.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TreeMapDemo">
-    <configuration default="false" name="TreeSetDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="xyz.antsgroup.demo.grammar.collection.set.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.set.TreeSetDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="grammar" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.IdentityHashMapDemo">
     <configuration default="false" name="EnumSetDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -741,6 +686,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.map.TreeMapDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="grammar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="IdentityHashMapDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xyz.antsgroup.demo.grammar.collection.map.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="xyz.antsgroup.demo.grammar.collection.map.IdentityHashMapDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1006,19 +971,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.addTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
-      <item index="3" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
-      <item index="4" class="java.lang.String" itemvalue="Application.HashMapDemo" />
-      <item index="5" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
-      <item index="6" class="java.lang.String" itemvalue="Application.TreeMapDemo" />
+      <item index="2" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.HashMapDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.TreeMapDemo" />
+      <item index="6" class="java.lang.String" itemvalue="Application.IdentityHashMapDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TreeMapDemo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HashMapDemo" />
-        <item index="3" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TreeSetDemo" />
+        <item index="0" class="java.lang.String" itemvalue="Application.IdentityHashMapDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TreeMapDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.LinkedHashMapDemo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.HashMapDemo" />
+        <item index="4" class="java.lang.String" itemvalue="Application.EnumSetDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -1119,12 +1084,12 @@
       <workItem from="1461804934630" duration="665000" />
       <workItem from="1461840179994" duration="9827000" />
       <workItem from="1461906105644" duration="15250000" />
-      <workItem from="1461982592751" duration="18263000" />
+      <workItem from="1461982592751" duration="19415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377077000" />
+    <option name="totallyTimeSpent" value="378229000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1148,12 +1113,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.71141976" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7654321" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25617284" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30246913" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32350597" sideWeight="0.34104937" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30677292" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30677292" sideWeight="0.6589506" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3059761" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1205,20 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/ConcurrentModificationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3592233">
-          <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring/src/main/resources/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34951457">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mybatis/src/main/resources/UserEntityMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.046925567">
@@ -1592,6 +1543,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29126215">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_40/src.zip!/java/util/IdentityHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="656" column="16" selection-start-line="656" selection-start-column="16" selection-end-line="656" selection-end-column="16" />
+          <folding>
+            <element signature="e#8408#8409#0" expanded="true" />
+            <element signature="e#8446#8447#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/TreeMapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1354#1381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
@@ -1606,31 +1597,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/HashMapDemo.java">
+    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/IdentityHashMapDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.37864077">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/LinkedHashMapDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/src/main/java/xyz/antsgroup/demo/grammar/collection/map/TreeMapDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8252427">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1354#1381#0" expanded="true" />
           </folding>
         </state>
       </provider>

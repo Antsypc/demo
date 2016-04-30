@@ -22,6 +22,6 @@ Java 集合类总结
     - `java.util.EnumMap<K,V> (implements java.lang.Cloneable, Serializable)`
     - `java.util.HashMap<K,V> (implements java.lang.Cloneable, Map<K,V>, Serializable)` HashMap 通过对键 hash,数组实现
         - `java.util.LinkedHashMap<K,V> (implements Map<K,V>)` 操作上与 HashMap 无异,但是LinkedHashMap 保留了插入顺序,实现了 LRU 算法:最近使用的放在最后.
-    - `java.util.IdentityHashMap<K,V> (implements java.lang.Cloneable, Map<K,V>, Serializable)`
+    - `java.util.IdentityHashMap<K,V> (implements java.lang.Cloneable, Map<K,V>, Serializable)` 只是不允许键值同时相等,允许同键不同值的元素,判断是否相等是具体到内存区块.
     - `java.util.TreeMap<K,V> (implements java.lang.Cloneable, NavigableMap<K,V>, Serializable)` 红黑树实现的 map
     - `java.util.WeakHashMap<K,V> (implements Map<K,V>)`
