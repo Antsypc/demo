@@ -12,7 +12,7 @@ Java 集合类总结
     - `java.util.AbstractQueue<E> (implements java.util.Queue<E>)`
         - `java.util.PriorityQueue<E> (implements java.io.Serializable)` 优先队列,堆实现,可直接获得最大或最小值,有序.
     - `java.util.AbstractSet<E> (implements java.util.Set<E>)`
-        - `java.util.EnumSet<E> (implements java.lang.Cloneable, java.io.Serializable)`
+        - `java.util.EnumSet<E> (implements java.lang.Cloneable, java.io.Serializable)` 只能使用静态工厂获取对象,其他操作方法与普通 set 无异.
         - `java.util.HashSet<E> (implements java.lang.Cloneable, java.io.Serializable, java.util.Set<E>)` 拥有集合的性质,内部实际上是用 HashMap 存储.
         - `java.util.LinkedHashSet<E> (implements java.lang.Cloneable, java.io.Serializable, java.util.Set<E>)` LinkedHashSet 继承自HashSet, 只不过使用是用链表实现, 内部使用 LinkedHashMap 保存元素.
         - `java.util.TreeSet<E> (implements java.lang.Cloneable, java.util.NavigableSet<E>, java.io.Serializable)` TreeSet 有序的集合类,实际使用 TreeMap 保存元素, TreeMap 使用红黑树实现.
