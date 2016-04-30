@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * HashMap 通过对键 hash,数组实现.
  *
+ * 如果需要对值进行排序 @see xyz.antsgroup.demo.grammar.collection.map.TreeMapDemo
  * @author ants_ypc
  * @version 1.0 4/30/16
  */
