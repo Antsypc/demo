@@ -20,7 +20,7 @@ Java 集合类总结
 
 - `java.util.AbstractMap<K,V> (implements java.util.Map<K,V>)`
     - `java.util.EnumMap<K,V> (implements java.lang.Cloneable, java.io.Serializable)`
-    - `java.util.HashMap<K,V> (implements java.lang.Cloneable, java.util.Map<K,V>, java.io.Serializable)`
+    - `java.util.HashMap<K,V> (implements java.lang.Cloneable, java.util.Map<K,V>, java.io.Serializable)` HashMap 通过对键 hash,数组实现
         - `java.util.LinkedHashMap<K,V> (implements java.util.Map<K,V>)`
     - `java.util.IdentityHashMap<K,V> (implements java.lang.Cloneable, java.util.Map<K,V>, java.io.Serializable)`
     - `java.util.TreeMap<K,V> (implements java.lang.Cloneable, java.util.NavigableMap<K,V>, java.io.Serializable)` 红黑树实现.
