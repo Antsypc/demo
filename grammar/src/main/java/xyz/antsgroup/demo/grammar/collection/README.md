@@ -14,7 +14,7 @@ Java 集合类总结
     - `java.util.AbstractSet<E> (implements java.util.Set<E>)`
         - `java.util.EnumSet<E> (implements java.lang.Cloneable, java.io.Serializable)`
         - `java.util.HashSet<E> (implements java.lang.Cloneable, java.io.Serializable, java.util.Set<E>)` 拥有集合的性质,内部实际上是用 HashMap 存储.
-        - `java.util.LinkedHashSet<E> (implements java.lang.Cloneable, java.io.Serializable, java.util.Set<E>)`
+        - `java.util.LinkedHashSet<E> (implements java.lang.Cloneable, java.io.Serializable, java.util.Set<E>)` LinkedHashSet 继承自HashSet, 只不过使用是用链表实现, 内部使用 LinkedHashMap 保存元素.
         - `java.util.TreeSet<E> (implements java.lang.Cloneable, java.util.NavigableSet<E>, java.io.Serializable)` 底层用 HashMap,使用红黑树(平衡二叉树),有序.
     - `java.util.ArrayDeque<E> (implements java.lang.Cloneable, java.util.Deque<E>, java.io.Serializable)` 数组实现的双端队列,与 LinkedList 对应.
 
