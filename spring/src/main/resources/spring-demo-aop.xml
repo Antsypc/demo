@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 定义需要被代理的对象 -->
+    <bean id="target01" class="xyz.antsgroup.demo.spring.aop.Target"/>
+    <bean id="target02" class="xyz.antsgroup.demo.spring.aop.Target2"/>
+    <bean id="target2Delegate" class="xyz.antsgroup.demo.spring.aop.Target2Delegate"/>
+
+    <!-- 定义横切方法 Bean -->
+    <bean id="targetBeforeAdvice" class="xyz.antsgroup.demo.spring.aop.TargetBeforeAdvice"/>
+    <bean id="targetAfterReturningAdvice" class="xyz.antsgroup.demo.spring.aop.TargetAfterReturningAdvice"/>
+    <bean id="targetMethodInterceptor" class="xyz.antsgroup.demo.spring.aop.TargetMethodInterceptor"/>
+    <bean id="targetThrowsAdvice" class="xyz.antsgroup.demo.spring.aop.TargetThrowsAdvice"/>
+
+    <!--
+        定义代理对象,最终被代理对象的所有方法的执行前,执行后,抛异常后都会执行被植入的横切方法.
+        target: 被代理对象
+        proxyInterfaces: 被代理对象需要实现的接口,可以是多个. 别名是 interfaces.
+        interceptorNames: 需要植入目标对象的 Bean,即已经实现 MethodInterceptor 或 Advisor 接口的 Bean.
+                同一切入点 before 调用顺序即配置顺序, after 顺序刚好相反.
+        singleton: 返回的代理是否是单例, 默认 true.
+        optimize: true 则使用 CGLib 代理,推荐单例时使用,默认 false.
+        proxyTargetClass: 是否对类进行代理,而不是根据接口,即创建的最终代理对象是创建子类实现.
+                而设置 proxyInterfaces 是实现接口来创建最终代理对象.该属性设置后,将忽略 proxyInterfaces.
+    -->
+    <bean id="targetProxy01" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:proxyInterfaces="xyz.antsgroup.demo.spring.aop.ITarget"
+          p:interceptorNames="targetBeforeAdvice, targetAfterReturningAdvice, targetMethodInterceptor, targetThrowsAdvice"
+          p:target-ref="target01"/>
+
+
+    <!--
+        使用切面可以规定到类实例的具体[方法]连接点,步骤:
+        1. 定义被代理的对象
+        2. 定义切面,并设置其横切方法
+        3. 定义代理对象,最终使用代理对象完成被代理对象的工作
+    -->
+
+    <!-- 静态普通方法名匹配切面 -->
+    <!-- 定义一个切面并指定对应横切方法,TargetStaticPointcutAdvisor 可以规定了哪些类的哪个方法被代理 -->
+    <bean id="staticPointcutAdvisor" class="xyz.antsgroup.demo.spring.aop.pointcut.TargetStaticPointcutAdvisor"
+          p:advice-ref="targetBeforeAdvice"/>
+    <!-- 定义代理对象 -->
+    <bean id="advisorProxyParent" abstract="true"
+          class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="staticPointcutAdvisor"
+          p:proxyTargetClass="true"/>
+    <bean id="targetProxy02" parent="advisorProxyParent" p:target-ref="target01"/>
+    <bean id="staticMethodProxy" parent="advisorProxyParent" p:target-ref="target02"/>
+
+
+    <!-- 静态正则表达式方法匹配切面,下面正则表达式规定了哪些类的哪些方法被代理 -->
+    <bean id="regexpAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"
+          p:advice-ref="targetBeforeAdvice">
+        <property name="patterns">
+            <list>
+                <value>.*sa.*</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="staticRegexProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="regexpAdvisor"
+          p:target-ref="target02"
+          p:proxyTargetClass="true"/>
+
+
+    <!-- 动态切面: 可以检查被代理对象的类和方法, 在运行时还可以额外动态检查参数来选择是否切入横切面代码 -->
+    <bean id="dynamicAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <property name="pointcut">
+            <bean class="xyz.antsgroup.demo.spring.aop.pointcut.TargetDynamicPointcut"/>
+        </property>
+        <property name="advice">
+            <bean class="xyz.antsgroup.demo.spring.aop.TargetBeforeAdvice"/>
+        </property>
+    </bean>
+    <bean id="dynamicProxy01" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="dynamicAdvisor"
+          p:target-ref="target02"
+          p:proxyTargetClass="true"/>
+
+
+    <!-- 流程切面(ControlFlowPointcut DefaultPointcutAdvisor 实现):
+        让某一方法内调用的所有方法都切入横切面代码.
+        如下指定 Target2Delegate 的 service 方法内调用的所有方法被植入
+    -->
+    <bean id="controlFlowPointcut" class="org.springframework.aop.support.ControlFlowPointcut">
+        <constructor-arg type="java.lang.Class" value="xyz.antsgroup.demo.spring.aop.Target2Delegate"/>
+        <constructor-arg type="java.lang.String" value="service"/>
+    </bean>
+    <bean id="controlFlowAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
+          p:pointcut-ref="controlFlowPointcut"
+          p:advice-ref="targetBeforeAdvice"/>
+    <bean id="controlFlowPointProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="controlFlowAdvisor"
+          p:target-ref="target02"
+          p:proxyTargetClass="true"/>
+
+
+</beans>

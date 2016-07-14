@@ -2,6 +2,6 @@
 .war
 .jar
 .ear
-*target*
+target/
 .idea/dataSources.*
 .idea/workspace.xml
