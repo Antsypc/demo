@@ -25,7 +25,7 @@ public class CarTest {
     @Test
     public void testGetBean() {
         Car car = (Car) applicationContext.getBean("myCar");
-        car.introduce();
+//        car.introduce();
         System.out.println(car);
     }
 }

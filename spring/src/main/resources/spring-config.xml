@@ -7,7 +7,11 @@
     <!-- spring3种注入方式:完成对象的构造 -->
     <!-- 1.属性注入，最常用 -->
     <bean id="hello1" class="xyz.antsgroup.demo.spring.hello.HelloWorld">
-        <!-- 调用相应set函数，把name设置为ypc -->
+        <!-- 调用相应set函数，把name设置为ypc
+            属性注入时,根据 Java Bean 规范,变量名要么全部小写,要么前两个字母都大写.
+            eg: iPhone 这种变量是不可以的,会导致属性注入失败.
+                spring 最终寻找的 setXxx 方法是 setIphone,而一般我们是写 setIPhone,所以会出错.
+        -->
         <property name="name" value="ypc" />
     </bean>
 
@@ -33,6 +37,13 @@
         <!--<constructor-arg><null/></constructor-arg>-->
     </bean>
 
+    <!-- 3.工厂方法注入,静态方法 -->
+    <bean id="car0" class="xyz.antsgroup.demo.spring.hello.CarFactory" factory-method="getNiceCar"/>
+    <!-- 如果工厂中不是静态方法,先实例化工厂,再指定方法 -->
+    <bean id="carFactory1" class="xyz.antsgroup.demo.spring.hello.CarFactory"/>
+    <bean id="car01" factory-bean="carFactory1" factory-method="getOneCar"/>
+
+
 
     <bean id="car1" class="xyz.antsgroup.demo.spring.hello.Car">
         <property name="info" value="haoche"/>
@@ -51,6 +62,11 @@
             </bean>
         </property>
         -->
+
+        <!-- 如果需要引用父容器的 myCar bean 使用如下方法 -->
+        <!--<property name="myCar">-->
+            <!--<ref parent="car001"/>-->
+        <!--</property>-->
     </bean>
 
     <!--为级联属性赋值，即为对象中的对象的属性赋值-->

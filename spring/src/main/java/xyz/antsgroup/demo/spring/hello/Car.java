@@ -7,6 +7,14 @@ public class Car {
     private String name;
     private String info;
 
+    public Car() {
+    }
+
+    public Car(String name, String info) {
+        this.name = name;
+        this.info = info;
+    }
+
     public String getName() {
         return name;
     }
