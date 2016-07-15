@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+    <!--
+         Appender : an output destination
+         appenders exist for the console, files, remote socket servers, Apache Flume, JMS,
+         remote UNIX Syslog daemons, and various database APIs
+    -->
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">    <!-- target默认是SYSTEM_ERR-->
+            <!-- pattern 中详细参数见 http://logging.apache.org/log4j/2.x/manual/layouts.html#PatternLayout-->
+            <PatternLayout pattern="%d [%t] %highlight{%-5level} %logger{36} - %msg%mdc%n%throwable"/>
+        </Console>
+        <File name="fileLog" fileName="logging/target/logging-test.log" append="false"> <!-- 生产环境append为true -->
+            <PatternLayout pattern="%d [%t] %-5level %logger{36} - %msg%mdc%n%throwable"/>
+        </File>
+    </appenders>
+
+    <!--
+        logger: output object
+        使用该对象输出日志,定义对象并设置输出的地方appender,输出的最低level
+    -->
+    <loggers>
+        <root level="trace">
+            <AppenderRef ref="Console"/>   <!-- 指定root这个logger对象的输出位置,ref是apperders中子元素name值 -->
+            <!--<AppenderRef ref="fileLog"/>-->
+        </root>
+        <!-- 自定义其他logger -->
+        <Logger name="com.foo.Bar" level="trace" additivity="false"> <!-- 如果一个logger对象additivity为true,那么输出一条记录后,还会执行父logger的输出 -->
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </loggers>
+</configuration>

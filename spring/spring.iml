@@ -5,8 +5,18 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring-demo-aop.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Spring Application Context (3)" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring-demo-aop-annotation.xml</file>
+        </fileset>
+        <fileset id="fileset4" name="Spring Application Context (4)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-web.xml</file>
+        </fileset>
+        <fileset id="fileset5" name="Spring Application Context (5)" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/spring-tx.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -58,5 +68,7 @@
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" level="project" />
   </component>
 </module>

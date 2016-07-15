@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS labms CHARACTER SET utf8;
+CREATE USER OneAnt@localhost IDENTIFIED BY 'OneAnt';
+GRANT ALL ON labms.* TO OneAnt@localhost;
