@@ -114,5 +114,27 @@
 
 
 
+    <!--
+        以上,使用 ProxyFactoryBean 类配置每一个动态代理对象.
+        在 Spring 中可以使用 BeanNameAutoProxyCreator, DefaultAdvisorAutoProxyCreator,
+        AnnotationAwareAspectJAutoProxyCreator 分别设置自动代理 普通切面, Advisor 切面, 使用 AspectJ 注解的切面.
+        这样, 就不用为每一个需要代理的对象设置 ProxyFactoryBean 了.
+    -->
+    <!--
+        针对普通代理
+        会自动给 target01, target02 生成一个代理对象, beanNames 也可以使用正则表达式.
+        在代码中,从 ApplicationContext 获取 Bean 是也不再使用 ProxyFactoryBean 的 id, 而直接使用被代理对象的 id,如 target01.
+     -->
+    <!-- <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator"
+          p:beanNames="target01, target02"
+          p:interceptorNames="targetBeforeAdvice"
+          p:optimize="true"/> -->
+
+    <!--
+        切面的自动代理
+        配置好被代理对象, 横切 Advice, 对应 Advisor(如上面的 staticPointcutAdvisor, regexpAdvisor, dynamicAdvisor,
+        controlFlowAdvisor), 再添加下面配置即可
+    -->
+    <!-- <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/> -->
 
 </beans>
