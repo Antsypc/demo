@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+        基于 @AspectJ 切面的驱动器,自动为 Spring 容器配置了 @AspectJ 的 Bean 创建代理完成切面织入.
+        内部使用 AnnotationAwareAspectJAutoProxyCreator 实现.
+    -->
+    <aop:aspectj-autoproxy/>
+
+    <bean id="target01" class="xyz.antsgroup.demo.spring.aop.Target2"/>
+    <bean class="xyz.antsgroup.demo.spring.aop.aspectj.PreAspect"/>
+
+</beans>
