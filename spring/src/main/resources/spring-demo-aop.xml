@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
 
     <!-- 定义需要被代理的对象 -->
     <bean id="target01" class="xyz.antsgroup.demo.spring.aop.Target"/>
@@ -97,6 +101,18 @@
           p:interceptorNames="controlFlowAdvisor"
           p:target-ref="target02"
           p:proxyTargetClass="true"/>
+
+    <!-- 复合切点切面 -->
+    <bean id="composablePointcut" class="xyz.antsgroup.demo.spring.aop.pointcut.TargetComposablePointcut"/>
+    <bean id="composableAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
+          p:pointcut="#{composablePointcut.intersectionPointcut}"
+          p:advice-ref="targetBeforeAdvice"/>
+    <bean id="composableProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="composableAdvisor"
+          p:target-ref="target02"
+          p:proxyTargetClass="true"/>
+
+
 
 
 </beans>

@@ -66,6 +66,18 @@ public class Main {
         // 会被植入
         delegate.service("GROUP-TARGET-DELEGATE");
 
+        /*
+        复合切点切面
+         */
+        System.out.println("================ComposablePointcut===================");
+        Target2 composableTarget = (Target2) context.getBean("composableProxy");
+        Target2Delegate delegate1 = new Target2Delegate();
+        delegate1.setTarget2(composableTarget);
+
+        composableTarget.say("COMPOSABLE-01");
+        composableTarget.serveTo("COMPOSABLE-01");
+        delegate1.service("COMPOSABLE-01");
+
         // 引介增强 IntroductionInterceptor
 
     }

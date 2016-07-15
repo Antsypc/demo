@@ -6,7 +6,7 @@ package xyz.antsgroup.demo.spring.aop;
 public class Target2 {
 
     public void say(String name) {
-        System.out.println("greet to " + name);
+        System.out.println("say to " + name);
     }
 
     public void serveTo(String name) {
