@@ -12,6 +12,7 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:property-placeholder location="classpath:jdbc.properties"/>
+    <context:component-scan base-package="xyz.antsgroup.demo.spring.transaction.dao, xyz.antsgroup.demo.spring.transaction.service"/>
 
     <!-- 配置数据源, c3p0 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -26,6 +27,22 @@
         <property name="acquireRetryAttempts" value="2"/>
     </bean>
 
+    <!-- 配置 sqlSessionFactory, mybatis -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 实例化sqlSessionFactory时需要使用上述配置好的数据源以及SQL映射文件 -->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:config/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:config/mapper/*.xml"/>
+        <!-- 扫描 entity 包,自动识别别名,如果有多个包用`;`隔开 -->
+        <property name="typeAliasesPackage" value="xyz.antsgroup.demo.spring.transaction.entity"/>
+    </bean>
+    <!-- 配置扫描器,扫描 DAO 接口的包,注入 bean 容器.这样就不用去实现接口,框架自动实现接口类 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 注入 bean -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!-- 扫描 xyz.antsgroup.demo.spring.transaction.dao 这个包以及它的子包下的所有映射接口类 -->
+        <property name="basePackage" value="xyz.antsgroup.demo.spring.transaction.dao"/>
+    </bean>
 
     <!-- Spring 事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="xyz.antsgroup.demo.spring.transaction.dao.CourseChooseLogDao">
+    <insert id="addLog">
+        INSERT INTO coursechooselog(studentId, labRoomUsageId, time) VALUE
+        (#{studentId}, #{labRoomUsageId}, #{time})
+    </insert>
+
+</mapper>
