@@ -3,5 +3,5 @@
 .jar
 .ear
 target/
-.idea/dataSources.*
-.idea/workspace.xml
+/.idea/dataSources*
+/.idea/workspace.xml

@@ -13,5 +13,14 @@
       <schema-pattern>mytest.*</schema-pattern>
       <default-schemas>mytest.*</default-schemas>
     </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="2f49a98d-ed0b-48ca-9fab-db0c8c34926e">
+      <user-name>OneAnt</user-name>
+      <user-password>dfe5dfc4dfcfdfebdfc4dfde</user-password>
+    </data-source>
+    <data-source name="dataSource" uuid="ed36608a-9dc0-497b-96f9-bf5467758138">
+      <first-sync>true</first-sync>
+      <user-name>jdbc:mysql://localhost:3306/labms?useUnicode=true&amp;characterEncoding=utf8//localhost:3306/labms?useUnicode=true&amp;characterEncoding=utf8</user-name>
+      <user-password>dfe5dfc4dfcfdfebdfc4dfde</user-password>
+    </data-source>
   </component>
 </project>

@@ -27,7 +27,14 @@
         <property name="acquireRetryAttempts" value="2"/>
     </bean>
 
-    <!-- 配置 sqlSessionFactory, mybatis -->
+    <!--
+        配置 sqlSessionFactory, mybatis
+        如果不使用 MapperScannerConfigurer 去自动创建实现类,需要自己去实现每个方法的具体实现.
+        Spring JDBC 使用 JdbcTemplate 操作数据库, MyBatis 使用 SqlSessionTemplate
+        <bean class="org.mybatis.spring.SqlSessionTemplate">
+            <constructor-arg ref="sqlSessionFactory"/>
+        </bean>
+    -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 实例化sqlSessionFactory时需要使用上述配置好的数据源以及SQL映射文件 -->
         <property name="dataSource" ref="dataSource"/>
@@ -51,4 +58,9 @@
     <!-- 扫描 @Transaction 的 Bean,加工织入事务管理切面 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
+
+    <!-- Spring JdbcTemplate -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+          p:dataSource-ref="dataSource"/>
+    <context:component-scan base-package="xyz.antsgroup.demo.spring.transaction.jdbc"/>
 </beans>
