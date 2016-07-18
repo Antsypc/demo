@@ -17,6 +17,7 @@
         <module>hibernate</module>
         <module>spring</module>
         <module>xml</module>
+        <module>websocket</module>
     </modules>
 
     <properties>
