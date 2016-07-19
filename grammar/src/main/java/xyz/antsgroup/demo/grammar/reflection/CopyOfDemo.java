@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * 扩大原数组的长度
  */
-public class CopyOfTest
+public class CopyOfDemo
 {
     public static void main(String[] args)
     {

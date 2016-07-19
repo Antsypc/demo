@@ -7,12 +7,12 @@ import java.lang.reflect.*;
  * 使用 invoke 进行执行该 method
  * 后文还有一个例子
  */
-public class MethodTableTest
+public class MethodTableDemo
 {
     public static void main(String[] args) throws Exception
     {
         // get method pointers to the square and sqrt methods
-        Method square = MethodTableTest.class.getMethod("square", double.class);
+        Method square = MethodTableDemo.class.getMethod("square", double.class);
         Method sqrt = Math.class.getMethod("sqrt", double.class);
 
         // print tables of x- and y-values

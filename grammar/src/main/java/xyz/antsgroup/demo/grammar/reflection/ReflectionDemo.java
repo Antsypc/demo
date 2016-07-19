@@ -44,7 +44,7 @@ import java.lang.reflect.*;
  * AccessibleObject.setAccessible(fieldArray, true);
  */
 
-public class ReflectionTest {
+public class ReflectionDemo {
     public static void main(String[] args) {
         // read class name from command line args or user input
         String name;
