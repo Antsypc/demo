@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        明确指定只扫描controller包下面的Bean,不扫描service,component等其他Bean,
+        否则会导致父容器中的service,component等重新加载,使配置在父容器中的一些事务管理Bean失效.
+        多个包用逗号隔开.
+    -->
+    <context:component-scan base-package="xyz.antsgroup.demo.spring.controller" />
+
+    <!--由于aop对象可能为Controller,所以需要controller加载完之后进行aop操作。 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!-- @ResponseBody 与页面输出不一样,需要如下解决中文乱码 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 静态资源 -->
+    <mvc:resources mapping="/public/**" location="/public/" />
+
+    <!-- 视图解析器,返回的视图将自动加上前后缀再去寻找文件 -->
+    <bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>
