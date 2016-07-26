@@ -46,7 +46,7 @@ public class CategoryDao {
      * @param parent 父类 ID
      * @return 插入条数
      */
-    public int addCategoryWithCallback(String name, int parent) {
+    public int addCategoryWithCallback(final String name, final int parent) {
         String sql = "INSERT INTO category(name, parent) VALUE(?, ?)";
         return jdbcTemplate.update(sql, new PreparedStatementSetter() {
             @Override
@@ -63,8 +63,8 @@ public class CategoryDao {
      * @param parent 父类 ID
      * @return 插入条数
      */
-    public int addCategoryWithCallback2(String name, int parent) {
-        String sql = "INSERT INTO category(name, parent) VALUE(?, ?)";
+    public int addCategoryWithCallback2(final String name, final int parent) {
+        final String sql = "INSERT INTO category(name, parent) VALUE(?, ?)";
         return jdbcTemplate.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -92,7 +92,7 @@ public class CategoryDao {
      * @param parent 父类 ID
      * @return 插入条数
      */
-    public int addCategoryGetKey(String name, int parent) {
+    public int addCategoryGetKey(final String name, final int parent) {
         final String sql = "INSERT INTO category(name, parent) VALUE(?, ?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(new PreparedStatementCreator() {
@@ -125,7 +125,7 @@ public class CategoryDao {
      * @param id 分类 id
      * @return Category
      */
-    public Category getCategoryById(int id) {
+    public Category getCategoryById(final int id) {
         String sql = "SELECT * FROM category WHERE categoryId = ?";
         final Category category = new Category();
         jdbcTemplate.query(sql, new Object[]{id}, new RowCallbackHandler() {
