@@ -1,6 +1,5 @@
 package xyz.antsgroup.demo.spring.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -47,15 +46,15 @@ public class HelloController {
      */
     @RequestMapping("/user/{userId}/{year:\\d{4}}-{month:\\d\\d}")
     @ResponseBody
-    public String findOwner(@PathVariable String userId, @PathVariable String year,
-            @PathVariable String month) {
+    public String findOwner(@PathVariable String month, @PathVariable String year,
+            @PathVariable String userId) {
         System.out.println(userId + year + month);
         return userId + year + month;
     }
 
     @RequestMapping("/user/{userId}/{year:\\d{4}}-{month:\\d\\d}/*")
     @ResponseBody
-    public String findOwnerOne(@PathVariable String userId, @PathVariable String year,
+    public String findOwnerOne(@PathVariable String year, @PathVariable String userId,
             @PathVariable String month, Model model) {
         System.out.println("one card" + userId + year + month);
         return "one card" + userId + year + month;
