@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd">
+       http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--
         基于 @AspectJ 切面的驱动器,自动为 Spring 容器配置了 @AspectJ 的 Bean 创建代理完成切面织入.
         内部使用 AnnotationAwareAspectJAutoProxyCreator 实现.
     -->
     <aop:aspectj-autoproxy/>
+    <context:component-scan base-package="xyz.antsgroup.demo.spring.aop.aspectj"/>
 
+    <!-- 也可以在 Target2 上加 Component 注解 -->
     <bean id="target01" class="xyz.antsgroup.demo.spring.aop.Target2"/>
-    <bean class="xyz.antsgroup.demo.spring.aop.aspectj.PreAspect"/>
+    <!-- 有了context:component-scan 就不用再写下面这句  -->
+    <!--<bean class="xyz.antsgroup.demo.spring.aop.aspectj.PreAspect"/>-->
 
 </beans>
