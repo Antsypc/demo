@@ -19,6 +19,7 @@
         <module>xml</module>
         <module>websocket</module>
         <module>webservice</module>
+        <module>utils</module>
     </modules>
 
     <properties>
