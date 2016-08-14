@@ -2,7 +2,9 @@ package xyz.antsgroup.demo.spring.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import xyz.antsgroup.demo.spring.entity.Employee;
 import xyz.antsgroup.demo.spring.entity.Manager;
 
 import javax.servlet.http.HttpServletRequest;
@@ -164,6 +166,19 @@ public class HelloController {
     }
 
     /**
+     * 如果是键值对的属性,能自动映射到对象中,并且支持级联属性 a.b 即 a 对象的 b 属性的值
+     * POST 或 GET 都可以
+     */
+    @RequestMapping(path = "/user/profile/mapping")
+    @ResponseBody
+    public String userProfileParamMap(Manager manager) {
+        System.out.println(manager);
+
+        return manager.toString();
+    }
+
+
+    /**
      * 使用@RequestBody, Writer 代替 @ResponseBody
      */
     @RequestMapping(path = "/user/profile/do", method = RequestMethod.POST)
@@ -232,4 +247,46 @@ public class HelloController {
         // position='null', gender='null', phone='null', email='null'}
         return manager.toString();
     }
+
+
+    /*
+    HttpMessageConverter 将HTTP请求信息转换为对象,将对象转换为相应
+    - DispatcherServlet 默认使用 AnnotationMethodHandlerAdapter 作为 HttpMessageConverter 的使用类, 默认注册的实现类有:
+      StringHttpMessageConverter, ByteArrayHttpMessageConverter, SourceHttpMessageConverter, XmlAwareFormHttpMessageConverter
+    - 如果需要其他的就配置一个 AnnotationMethodHandlerAdapter bean.如:
+      <bean class="...AnnotationMethodHandlerAdapter" p:messageConverters-ref="messageConverters"/>
+      <util:list id="messageConverters">
+        <bean />
+        <bean />
+      </util:list>
+    - 如果mapping处理器方法使用了@ResponseBody/@RequestBody 或 HttpEntity<>/ResponseEntity<> 才会使用注册的 HttpMessageConverter 进行转换.
+    - 转换时,首先根据请求头或响应头的类型选择对应的转换实现类, 今儿根据参数类型或泛型类型选择匹配的转换实现类.
+    -
+
+     */
+
+    /**
+     * 如此会返回给 /jsp/example/pa/test/message/converter/object.jsp 页面,把 manager 传过去
+     */
+    @RequestMapping(path = "/test/message/converter/object")
+    public Manager messageConverterObject() {
+        Manager manager = new Manager();
+        manager.setId("2342342");
+        return manager;
+    }
+
+    /**
+     * 返回给 /jsp/http%20message%20converter%20return%20string.jsp 页面
+     */
+    @RequestMapping(path = "/test/message/converter/string")
+    public String messageConverterString() {
+        return "http message converter return string";
+    }
+
+
+
+
+
+
+
 }

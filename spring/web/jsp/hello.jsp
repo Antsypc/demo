@@ -20,6 +20,19 @@ ${msg}
 
 </form>
 
+<form action="<%=request.getContextPath()%>/example/pa/user/profile/mapping" method="post">
+    id: <input  name="id"/>
+    password: <input  name="password"/>
+    name: <input  name="name"/>
+    position: <input  name="position"/>
+    gender: <input name="gender"/>
+    phone: <input  name="phone"/>
+    email: <input  name="email"/>
+    <button>提交</button>
+    <button type="submit">get</button>
+    <button>do</button>
+</form>
+
 
 
 <script src="<%=request.getContextPath()%>/public/vendor/jQuery/jquery-2.2.3.min.js"></script>
@@ -46,7 +59,7 @@ ${msg}
             type:"POST",
             contentType:"application/json",
             data: data,
-            url:"<%=request.getContextPath()%>/example/pa/user/profile",
+            url:"<%=request.getContextPath()%>/example/pa/user/profile/mapping",
             success : function(data) {
                 alert(data);
                 console.log(data)
