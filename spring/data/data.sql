@@ -1,6 +1,6 @@
 USE labms;
 
-INSERT INTO student(studentId, password, name, department, major, `_class`, gender, inYear, nativePlace, phone, email) VALUES
+INSERT INTO student(studentId, password, name, department, major, `classes`, gender, inYear, nativePlace, phone, email) VALUES
   ('0121310880433', '123456', 'YOUNG', 'computer', 'software', 'soft01', 'man', 2013, 'China', '15512345678', 'y@mail.com');
 
 INSERT INTO teacher(teacherId, password, name, department, title, gender, phone, email, inYear, nativePlace) VALUES

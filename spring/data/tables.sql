@@ -24,7 +24,7 @@ CREATE TABLE student(
     name VARCHAR(20) NOT NULL,              # 姓名
     department VARCHAR(20) NOT NULL,        # 学院
     major VARCHAR(20) NOT NULL,             # 专业
-    _class VARCHAR(20) NOT NULL,            # 班级
+    classes VARCHAR(20) NOT NULL,           # 班级
     gender VARCHAR(3) NOT NULL,             # 性别
     inYear SMALLINT NOT NULL,               # 入学年份
     nativePlace VARCHAR(50) NOT NULL,       # 籍贯

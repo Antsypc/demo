@@ -16,7 +16,7 @@
         否则会导致父容器中的service,component等重新加载,使配置在父容器中的一些事务管理Bean失效.
         多个包用逗号隔开.
     -->
-    <context:component-scan base-package="xyz.antsgroup.demo.spring.controller" />
+    <context:component-scan base-package="xyz.antsgroup.demo.spring.**.controller, xyz.antsgroup.demo.spring.paging" />
 
     <!--由于aop对象可能为Controller,所以需要controller加载完之后进行aop操作。 -->
     <aop:aspectj-autoproxy proxy-target-class="true" />
