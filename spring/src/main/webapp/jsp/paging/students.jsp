@@ -49,8 +49,41 @@
 
 <script type="text/javascript">
     $("#student-table").DataTable({
+        serverSide: true,
+        ajax: {
+            'url': '${ctx}/paging/students',
+            'type': 'POST',
+//            'dataSrc': '',
+            'data': {
+                department: $("#department").val(),
+                major: $("#major").val(),
+                classes: $("#classes").val()
+            }
+        },
+
 
     });
+
+    $("#search").click(function () {
+        $.ajax({
+            url: "${ctx}/paging/students",
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: {
+                department: $("#department").val(),
+                major: $("#major").val(),
+                classes: $("#classes").val()
+            },
+            headers: {
+                "Accept": "application/json"
+            }
+        }).done(function (data) {
+            console.log(data);
+        }).fail(function (reason) {
+            console.log(reason);
+        })
+    });
+
 </script>
 
 </body>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xyz.antsgroup.demo.spring.paging.StudentDao">
+
+    <select id="getStudents" resultType="xyz.antsgroup.demo.spring.paging.StudentEntity">
+        SELECT * FROM student
+        <where>
+            <if test="department != null and department != ''">
+                department = #{department}
+            </if>
+            <if test="major != null and major != ''">
+                AND major = #{major}
+            </if>
+            <if test="classes != null and classes != ''">
+                AND classes = #{classes}
+            </if>
+        </where>
+        <if test="orderBy != null and orderBy != ''">
+            ORDER BY ${orderBy}
+        </if>
+        <if test="orderWay != null and orderWay != ''">
+            ${orderWay}
+        </if>
+        <if test="limitFrom != null and orderWay != '' and limitSize != null and limitSize !=''">
+            LIMIT ${limitFrom}, ${limitSize}
+        </if>
+
+
+    </select>
+
+</mapper>

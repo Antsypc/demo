@@ -7,17 +7,17 @@ public class PageQuery {
     /*
     每页显示条数
      */
-    private int perPage = 20;
+    private Integer perPage = -1;
 
     /*
     当前页编号
      */
-    private int current = 1;
+    private Integer current = 1;
 
     /*
     总共的页数
      */
-    private int pageTotal;
+    private Integer pageTotal;
 
     /*
     排序依据的字段, 空则忽略排序
@@ -27,32 +27,32 @@ public class PageQuery {
     /*
     是否升序, 1: 是, 0: 否, 其他则忽略排序
      */
-    private int asc;
+    private String asc;
 
     public PageQuery() {
     }
 
-    public int getPerPage() {
+    public Integer getPerPage() {
         return perPage;
     }
 
-    public void setPerPage(int perPage) {
+    public void setPerPage(Integer perPage) {
         this.perPage = perPage;
     }
 
-    public int getCurrent() {
+    public Integer getCurrent() {
         return current;
     }
 
-    public void setCurrent(int current) {
+    public void setCurrent(Integer current) {
         this.current = current;
     }
 
-    public int getPageTotal() {
+    public Integer getPageTotal() {
         return pageTotal;
     }
 
-    public void setPageTotal(int pageTotal) {
+    public void setPageTotal(Integer pageTotal) {
         this.pageTotal = pageTotal;
     }
 
@@ -64,11 +64,11 @@ public class PageQuery {
         this.order = order;
     }
 
-    public int getAsc() {
+    public String getAsc() {
         return asc;
     }
 
-    public void setAsc(int asc) {
+    public void setAsc(String asc) {
         this.asc = asc;
     }
 
@@ -79,7 +79,7 @@ public class PageQuery {
                 ", current=" + current +
                 ", pageTotal=" + pageTotal +
                 ", order='" + order + '\'' +
-                ", asc=" + asc +
+                ", asc='" + asc + '\'' +
                 '}';
     }
 }
