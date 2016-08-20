@@ -3,6 +3,7 @@
 
 <mapper namespace="xyz.antsgroup.demo.spring.paging.StudentDao">
 
+    <!-- 分页查询学生记录 -->
     <select id="getStudents" resultType="xyz.antsgroup.demo.spring.paging.StudentEntity">
         SELECT * FROM student
         <where>
@@ -19,14 +20,28 @@
         <if test="orderBy != null and orderBy != ''">
             ORDER BY ${orderBy}
         </if>
-        <if test="orderWay != null and orderWay != ''">
-            ${orderWay}
+        <if test="orderDir != null and orderDir != ''">
+            ${orderDir}
         </if>
-        <if test="limitFrom != null and orderWay != '' and limitSize != null and limitSize !=''">
-            LIMIT ${limitFrom}, ${limitSize}
+        <if test="limitStart != null and limitStart != '' and limitLength != null and limitLength !=''">
+            LIMIT ${limitStart}, ${limitLength}
         </if>
+    </select>
 
-
+    <!-- 符合条件学生记录总数 -->
+    <select id="getTotal" resultType="java.lang.Integer">
+        SELECT count(1) from student
+        <where>
+            <if test="department != null and department != ''">
+                department = #{department}
+            </if>
+            <if test="major != null and major != ''">
+                AND major = #{major}
+            </if>
+            <if test="classes != null and classes != ''">
+                AND classes = #{classes}
+            </if>
+        </where>
     </select>
 
 </mapper>
