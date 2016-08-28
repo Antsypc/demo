@@ -2,7 +2,7 @@
 .war
 .jar
 .ear
+.iml
 target/
-/.idea/dataSources*
-/.idea/workspace.xml
+.idea/
 out/
