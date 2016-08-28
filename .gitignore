@@ -2,7 +2,7 @@
 .war
 .jar
 .ear
-.iml
+**/*.iml
 target/
 .idea/
 out/
