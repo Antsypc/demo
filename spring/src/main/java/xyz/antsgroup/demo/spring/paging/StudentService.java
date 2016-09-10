@@ -39,11 +39,11 @@ public class StudentService {
      * @param classes    班级
      * @return 学生列表
      */
-    public List<StudentEntity> getStudentsByCondition(PagingRequest page, String department, String major, String classes) {
+    public List<StudentEntity> getStudentsByCondition(DataTablesPageable page, String department, String major, String classes) {
         Integer limitStart = page.getStart();
         Integer limitLength = page.getLength();
-        String orderBy = columns[page.getOrder().get(0).getColumn()];
-        String dir = page.getOrder().get(0).getDir().toLowerCase();
+        String orderBy = columns[((Order) (page.getOrder().get(0))).getColumn()];
+        String dir = ((Order) (page.getOrder().get(0))).getDir().toLowerCase();
         String orderDir = "asc".equals(dir) ? "asc" : ("desc".equals(dir) ? "desc" : "");
 
         return studentDao.getStudents(department, major, classes, limitStart, limitLength, orderBy, orderDir);

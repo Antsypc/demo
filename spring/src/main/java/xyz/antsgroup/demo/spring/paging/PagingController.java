@@ -42,17 +42,15 @@ public class PagingController {
      */
     @RequestMapping(value = "/students/json")
     @ResponseBody
-    public DataTablesResponse<StudentEntity> studentData(PagingRequest paging, String department,
+    public DataTablesPageable<StudentEntity> studentData(DataTablesPageable<StudentEntity> paging, String department,
                                                          String major, String classes) {
         List<StudentEntity> students = studentService.getStudentsByCondition(paging, department, major, classes);
         Integer studentTotal = studentService.getStudentTotal(department, major, classes);
 
-        DataTablesResponse<StudentEntity> response = new DataTablesResponse<>();
-        response.setDraw(paging.getDraw());
-        response.setData(students);
-        response.setRecordsTotal(studentTotal);
-        response.setRecordsFiltered(studentTotal);
-        return response;
+        paging.setData(students);
+        paging.setRecordsTotal(studentTotal);
+        paging.setRecordsFiltered(studentTotal);
+        return paging;
     }
 
 

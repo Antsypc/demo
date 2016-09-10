@@ -48,8 +48,8 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 实例化sqlSessionFactory时需要使用上述配置好的数据源以及SQL映射文件 -->
         <property name="dataSource" ref="labmsDataSource"/>
-        <property name="configLocation" value="classpath:config/mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath:config/mapper/*.xml"/>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
         <!-- 扫描包,自动识别别名,如果有多个包用`;`隔开 -->
         <property name="typeAliasesPackage" value="xyz.antsgroup.demo.spring.paging"/>
     </bean>
