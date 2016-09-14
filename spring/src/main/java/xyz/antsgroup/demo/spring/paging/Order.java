@@ -10,6 +10,17 @@ public class Order {
     /* asc 或 desc */
     private String dir;
 
+    /* 对应数据库字段 */
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Integer getColumn() {
         return column;
     }
@@ -31,6 +42,7 @@ public class Order {
         return "Order{" +
                 "column=" + column +
                 ", dir='" + dir + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

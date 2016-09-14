@@ -10,10 +10,20 @@ public class Pageable<T> {
     private Integer start;
     // 记录长度
     private Integer length;
-    /* 排序, order[0].column=1&order[0].dir=asc */
+    /* 排序, order[0].column=1&order[0].name=ab&order[0].dir=asc */
     private List<Order> order;
     // 返回的数据
     private List<T> data;
+
+    private Long total;
+
+    public Long getTotal() {
+        return total;
+    }
+
+    public void setTotal(Long total) {
+        this.total = total;
+    }
 
     public Integer getStart() {
         return start;
@@ -53,6 +63,7 @@ public class Pageable<T> {
                 "start=" + start +
                 ", length=" + length +
                 ", order=" + order +
+                ", total=" + total +
                 ", data=" + data +
                 '}';
     }

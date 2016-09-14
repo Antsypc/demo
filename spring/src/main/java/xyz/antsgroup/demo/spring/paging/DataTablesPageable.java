@@ -1,15 +1,11 @@
 package xyz.antsgroup.demo.spring.paging;
 
-import java.util.List;
-
 /**
  * 符合 DataTables 接口的请求/响应对象
  */
 public class DataTablesPageable<T> extends Pageable<T> {
 
     private Integer draw;
-    private Integer recordsTotal;
-    private Integer recordsFiltered;
     /* 搜索框输入值 */
     private String search;
 
@@ -25,21 +21,21 @@ public class DataTablesPageable<T> extends Pageable<T> {
         this.draw = draw;
     }
 
-    public Integer getRecordsTotal() {
-        return recordsTotal;
+    public Long getRecordsTotal() {
+        return super.getTotal();
     }
 
-    public void setRecordsTotal(Integer recordsTotal) {
-        this.recordsTotal = recordsTotal;
+    public void setRecordsTotal(Long recordsTotal) {
+        super.setTotal(recordsTotal);
     }
 
-    public Integer getRecordsFiltered() {
+    public Long getRecordsFiltered() {
         // recordsTotal == recordsFiltered
-        return recordsTotal;
+        return super.getTotal();
     }
 
-    public void setRecordsFiltered(Integer recordsFiltered) {
-        this.recordsFiltered = recordsFiltered;
+    public void setRecordsFiltered(Long recordsFiltered) {
+        super.setTotal(recordsFiltered);
     }
 
     public Integer getStatus() {
@@ -66,8 +62,8 @@ public class DataTablesPageable<T> extends Pageable<T> {
                 ", order=" + getOrder() +
                 ", data=" + getData() +
                 "draw=" + draw +
-                ", recordsTotal=" + recordsTotal +
-                ", recordsFiltered=" + recordsFiltered +
+                ", recordsTotal=" + super.getTotal() +
+                ", recordsFiltered=" + super.getTotal() +
                 ", search='" + search + '\'' +
                 ", status=" + status +
                 ", msg='" + msg + '\'' +

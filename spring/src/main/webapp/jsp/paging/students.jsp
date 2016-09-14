@@ -64,6 +64,7 @@
                         start: d.start,
                         length: d.length,
                         "order[0].column": d.order[0].column,
+                        "order[0].name": d.columns[d.order[0].column].name,
                         "order[0].dir": d.order[0].dir,
                         department: $("#department").val(),
                         major: $("#major").val(),
@@ -72,17 +73,18 @@
                 }
             },
             columns: [
-                {data: "studentId"},
-                {data: "password"},
-                {data: "name"},
-                {data: "department"},
-                {data: "major"},
-                {data: "classes"},
-                {data: "gender"},
-                {data: "inYear"},
-                {data: "nativePlace"},
-                {data: "phone"},
-                {data: "email"}
+                    // name 与数据库字段对应
+                {data: "studentId", "name": "studentId"},
+                {data: "password", "name": "password"},
+                {data: "name", "name": "name"},
+                {data: "department", "name": "department"},
+                {data: "major", "name": "major"},
+                {data: "classes", "name": "classes"},
+                {data: "gender", "name": "gender"},
+                {data: "inYear", "name": "inYear"},
+                {data: "nativePlace", "name": "nativePlace"},
+                {data: "phone", "name": "phone"},
+                {data: "email", "name":"email"}
             ]
             // 或者将 ajax 用function (data, callback, settings)赋值, 最后一定要回调 callback
             //ajax: function (data, callback, settings) {
